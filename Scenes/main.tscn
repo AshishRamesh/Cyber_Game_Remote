@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://crnf4y01wg0ny"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_xdxcv"]
+[ext_resource type="PackedScene" uid="uid://la7mnqtqhdfj" path="res://Scenes/Platformer/lvl_1.tscn" id="2_tlup7"]
+[ext_resource type="PackedScene" uid="uid://bab7i1wvnaqwn" path="res://Scenes/Mini_Games/pass-check/password_checker.tscn" id="3_wewm1"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_xdxcv")
+
+[node name="password_checker" parent="." instance=ExtResource("3_wewm1")]
+visible = false
+
+[node name="lvl_1" parent="." instance=ExtResource("2_tlup7")]

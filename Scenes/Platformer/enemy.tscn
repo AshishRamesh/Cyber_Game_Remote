@@ -43,7 +43,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_kdic3"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_573jd"]
+size = Vector2(18, 18)
 
 [node name="enemy" type="Node2D"]
 script = ExtResource("1_f5has")
@@ -56,8 +57,7 @@ autoplay = "default"
 [node name="killzone" parent="." instance=ExtResource("5_wkfxq")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
-position = Vector2(0, -1)
-shape = SubResource("CircleShape2D_kdic3")
+shape = SubResource("RectangleShape2D_573jd")
 
 [node name="RayCast_right" type="RayCast2D" parent="."]
 target_position = Vector2(28, 0)

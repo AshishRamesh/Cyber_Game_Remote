@@ -11,5 +11,5 @@ func _on_body_exited(body: Node2D) -> void:
 func _process(delta: float) -> void:
 	if entered == true:
 		if Input.is_action_just_pressed("ui_down"):
-			print("Changing Scene")
-			get_tree().change_scene_to_file("res://Scenes/Mini_Games/DDos/game_scene.tscn")
+			print("hi")
+			get_tree().change_scene_to_file("res://Scenes/Mini_Games/pass-check/passwordcracker.tscn")

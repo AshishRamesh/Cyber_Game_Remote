@@ -4,6 +4,7 @@ var letter_hash = {}
 var correct_password = ""  
 var hashed_password = ""  
 var attempts = 3  
+@onready var animated_sprite: AnimatedSprite2D = $computer_pwd_chk/AnimatedSprite2D
 
 # Load ❌ icon for wrong attempts
 var wrong_icon = preload("res://assets/Props/keyboard_x_1.svg")  # Update the correct path
@@ -81,8 +82,10 @@ func _on_PasswordInput_text_submitted(user_input: String):
 
 	if user_hash == hashed_password:
 		$FeedbackLabel.text = "✅ Correct! You cracked the code!"
-		get_tree().change_scene_to_file("res://Scenes/Menus/you_won.tscn") 
+		get_tree().change_scene_to_file("res://Scenes/Platformer/lvl_1.tscn") 
+		
 		#await get_tree().create_timer(1).timeout  
+
 		 
 	else:
 		if attempts > 0:
@@ -96,4 +99,4 @@ func _on_PasswordInput_text_submitted(user_input: String):
 			$FeedbackLabel.text = "❌ Wrong! Attempts left: " + str(attempts)
 		else:
 			$FeedbackLabel.text = "❌ You lost! The word was: " + correct_password
-			get_tree().change_scene_to_file("res://Scenes/Menus/game_over.tscn") 
+			get_tree().change_scene_to_file("res://Scenes/Menus/game_over_pswd_chk.tscn") 
