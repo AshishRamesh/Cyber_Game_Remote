@@ -7,7 +7,7 @@ var attempts = 3
 @onready var animated_sprite: AnimatedSprite2D = $computer_pwd_chk/AnimatedSprite2D
 
 # Load ❌ icon for wrong attempts
-var wrong_icon = preload("res://assets/Props/keyboard_x_1.svg")  # Update the correct path
+var wrong_icon = preload("res://icon.svg")  # Update the correct path
 
 # Store references to attempt icons
 var attempt_boxes = []  
@@ -60,7 +60,7 @@ func display_hashes():
  
 
 func generate_meaningful_password():
-	var words = ["PASSWORD", "ADMIN", "LETMEIN", "DATA", "QWERTY", "SAFE", "WORLD", "HELLO", "GODOT","TEAMJASN"]
+	var words = ["CODE", "PLAY", "HERO", "DATA", "LOVE", "SAFE", "WORLD", "HELLO", "GODOT"]
 	correct_password = words[randi() % words.size()]
 	hashed_password = ""  
 
