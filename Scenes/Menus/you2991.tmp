@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=3 uid="uid://d25oare6a55ki"]
+
+[ext_resource type="Script" path="res://Scenes/Menus/you_won.gd" id="1_3gw3g"]
+[ext_resource type="Texture2D" uid="uid://bo6pt834kaecn" path="res://assets/World Files/Warped City/V1/warped city files/ENVIRONMENT/background/skyline-b.png" id="1_3xese"]
+[ext_resource type="FontFile" uid="uid://y8cdy6s8ygda" path="res://assets/Fonts/m42.TTF" id="2_g75s0"]
+[ext_resource type="FontFile" uid="uid://dmujmael4nlo1" path="res://assets/Fonts/Vermin Vibes 1989.ttf" id="4_rtdru"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mvtqe"]
+texture = ExtResource("1_3xese")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_skw83"]
+
+[node name="basic_control_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3gw3g")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_mvtqe")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -214.5
+offset_top = -118.5
+offset_right = 214.5
+offset_bottom = 118.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.906521, 0.834418, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.493309, 0.493309, 0.493309, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_fonts/font = ExtResource("2_g75s0")
+theme_override_font_sizes/font_size = 78
+text = "YOU
+WON!"
+horizontal_alignment = 1
+vertical_alignment = 3
+
+[node name="press_enter_continue" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 409.0
+offset_top = 881.0
+offset_right = 766.0
+offset_bottom = 928.0
+theme_override_fonts/font = ExtResource("4_rtdru")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_skw83")
+text = "PRESS ENTER TO CONTINUE"
+
+[connection signal="pressed" from="Panel/press_enter_continue" to="." method="_on_press_enter_continue_pressed"]
