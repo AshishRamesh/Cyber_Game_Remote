@@ -1,0 +1,159 @@
+[gd_scene load_steps=10 format=3 uid="uid://c8x1tr6uyaknt"]
+
+[ext_resource type="Texture2D" uid="uid://cpq3qdfhjjbes" path="res://assets/World Files/Warped City/V1/warped city files/ENVIRONMENT/background/skyline-a.png" id="1_jcqnl"]
+[ext_resource type="FontFile" uid="uid://dmujmael4nlo1" path="res://assets/Fonts/Vermin Vibes 1989.ttf" id="2_lpuhf"]
+[ext_resource type="FontFile" uid="uid://y8cdy6s8ygda" path="res://assets/Fonts/m42.TTF" id="3_bnad1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oewx1"]
+texture = ExtResource("1_jcqnl")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v0n4c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7wf6"]
+bg_color = Color(0.0779327, 0.469171, 0.369016, 1)
+skew = Vector2(1, 0)
+border_width_left = 7
+border_width_top = 9
+border_width_right = 9
+border_width_bottom = 7
+shadow_size = 5
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rdnue"]
+bg_color = Color(1, 0.831373, 0.290196, 1)
+skew = Vector2(1, 0)
+border_width_left = 7
+border_width_top = 9
+border_width_right = 9
+border_width_bottom = 7
+shadow_size = 5
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xoq5x"]
+bg_color = Color(0, 1, 0.966667, 1)
+skew = Vector2(1, 0)
+border_width_left = 7
+border_width_top = 9
+border_width_right = 9
+border_width_bottom = 7
+shadow_size = 5
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2bnm4"]
+modulate_color = Color(0.496337, 0.496337, 0.496337, 1)
+
+[node name="Pause_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_oewx1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -263.0
+offset_top = -153.0
+offset_right = 263.0
+offset_bottom = 153.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="resum" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("2_lpuhf")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v0n4c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_c7wf6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rdnue")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xoq5x")
+text = "RESUME"
+
+[node name="restart" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_lpuhf")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v0n4c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_c7wf6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rdnue")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xoq5x")
+text = "RESTART"
+
+[node name="main_menu" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_lpuhf")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v0n4c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_c7wf6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rdnue")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xoq5x")
+text = "MAIN MENU"
+
+[node name="exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_lpuhf")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v0n4c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_c7wf6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rdnue")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xoq5x")
+text = "EXIT"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -251.0
+offset_top = -418.0
+offset_right = 251.0
+offset_bottom = -328.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.616573, 0.616573, 0.616573, 1)
+theme_override_constants/shadow_offset_x = 9
+theme_override_constants/shadow_offset_y = 8
+theme_override_fonts/font = ExtResource("3_bnad1")
+theme_override_font_sizes/font_size = 116
+theme_override_styles/normal = SubResource("StyleBoxTexture_2bnm4")
+text = "PAUSE MENU"
+horizontal_alignment = 1
+vertical_alignment = 1

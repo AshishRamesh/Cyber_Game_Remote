@@ -1,0 +1,222 @@
+[gd_scene load_steps=14 format=3 uid="uid://tmyasyu24i6x"]
+
+[ext_resource type="Texture2D" uid="uid://cpq3qdfhjjbes" path="res://assets/World Files/Warped City/V1/warped city files/ENVIRONMENT/background/skyline-a.png" id="1_c4ayk"]
+[ext_resource type="FontFile" uid="uid://dmujmael4nlo1" path="res://assets/Fonts/Vermin Vibes 1989.ttf" id="2_dnas3"]
+[ext_resource type="Texture2D" uid="uid://t65vr0qlwqnr" path="res://assets/Props/left.jpg" id="3_rtniu"]
+[ext_resource type="FontFile" uid="uid://db67b11v1r2hx" path="res://assets/Fonts/Minecrafter.Alt.ttf" id="5_5f3pv"]
+[ext_resource type="Texture2D" uid="uid://citgyhw6jvjpd" path="res://assets/Props/space.jpg" id="5_q7an5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pjdna"]
+texture = ExtResource("1_c4ayk")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_46af3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uo0c2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ib6ya"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dcuoi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kp2eh"]
+bg_color = Color(0, 0, 0, 0.298039)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.905882, 0.835294, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5jpeg"]
+texture = ExtResource("3_rtniu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tyirg"]
+texture = ExtResource("5_q7an5")
+
+[node name="basic_control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bg" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pjdna")
+
+[node name="press_to_continue" type="Button" parent="bg"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -278.0
+offset_top = 557.0
+offset_right = 278.0
+offset_bottom = 656.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_dnas3")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_46af3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_uo0c2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ib6ya")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dcuoi")
+text = "PRESS ENTER TO CONTINUE"
+
+[node name="yellow_boader" type="Panel" parent="bg"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1015.0
+offset_top = -524.5
+offset_right = 1015.0
+offset_bottom = 524.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kp2eh")
+metadata/_edit_lock_ = true
+
+[node name="controls" type="Label" parent="bg"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -229.0
+offset_top = 86.0
+offset_right = 302.0
+offset_bottom = 208.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_dnas3")
+theme_override_font_sizes/font_size = 110
+text = "CONTROLS"
+horizontal_alignment = 1
+
+[node name="left" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 393.0
+offset_top = 773.0
+offset_right = 504.0
+offset_bottom = 877.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_5jpeg")
+
+[node name="right" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 504.0
+offset_top = 1063.0
+offset_right = 615.0
+offset_bottom = 1167.0
+rotation = -3.14597
+theme_override_styles/panel = SubResource("StyleBoxTexture_5jpeg")
+
+[node name="space" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 115.0
+offset_top = 183.0
+offset_right = 193.0
+offset_bottom = 223.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.7315, 2.28014)
+theme_override_styles/panel = SubResource("StyleBoxTexture_tyirg")
+
+[node name="down" type="Panel" parent="."]
+offset_left = 1391.0
+offset_top = 877.0
+offset_right = 1502.0
+offset_bottom = 981.0
+rotation = -1.56837
+theme_override_styles/panel = SubResource("StyleBoxTexture_5jpeg")
+
+[node name="Left" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -738.0
+offset_top = -35.0
+offset_right = -304.0
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_5f3pv")
+theme_override_font_sizes/font_size = 50
+text = ": To Move Left"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Right" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -750.0
+offset_top = 157.0
+offset_right = -291.0
+offset_bottom = 260.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_5f3pv")
+theme_override_font_sizes/font_size = 50
+text = ": To Move Right"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Down" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 271.0
+offset_top = -29.0
+offset_right = 727.0
+offset_bottom = 74.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_5f3pv")
+theme_override_font_sizes/font_size = 50
+text = ": To Move Down"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Jump" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 276.0
+offset_top = 163.0
+offset_right = 710.0
+offset_bottom = 266.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_5f3pv")
+theme_override_font_sizes/font_size = 50
+text = ": To Jump"
+horizontal_alignment = 1
+vertical_alignment = 1
