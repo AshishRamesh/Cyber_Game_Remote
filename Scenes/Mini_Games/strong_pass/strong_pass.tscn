@@ -1,13 +1,13 @@
 [gd_scene load_steps=7 format=3 uid="uid://bxtvy0kdsqivo"]
 
 [ext_resource type="Script" path="res://Scripts/mini_game/strong_pass/strongpass.gd" id="1_f66y2"]
-[ext_resource type="Texture2D" uid="uid://cpq3qdfhjjbes" path="res://assets/World Files/Warped City/V1/warped city files/ENVIRONMENT/background/skyline-a.png" id="2_yrdg4"]
+[ext_resource type="Texture2D" uid="uid://dx1f68b56e85" path="res://assets/Props/moni.jpg" id="2_1neah"]
 [ext_resource type="FontFile" uid="uid://ma1j7da4mhsj" path="res://assets/Fonts/pixel_lcd_7.ttf" id="3_d77y6"]
 [ext_resource type="FontFile" uid="uid://db67b11v1r2hx" path="res://assets/Fonts/Minecrafter.Alt.ttf" id="3_hv30q"]
 [ext_resource type="FontFile" uid="uid://dmujmael4nlo1" path="res://assets/Fonts/Vermin Vibes 1989.ttf" id="5_1ysof"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r4xr5"]
-texture = ExtResource("2_yrdg4")
+texture = ExtResource("2_1neah")
 
 [node name="Main" type="Control"]
 layout_mode = 3
