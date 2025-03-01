@@ -12,18 +12,6 @@ modulate_color = Color(0.750489, 0.750489, 0.750489, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3snf5"]
 bg_color = Color(0.0779327, 0.469171, 0.369016, 1)
-[gd_scene load_steps=5 format=3 uid="uid://cgno5rqnbdu"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_am14h"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_samfi"]
-bg_color = Color(0.0431373, 0.32549, 0.254902, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0w7v"]
-bg_color = Color(0.0748062, 0.455662, 0.358113, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3aacs"]
-bg_color = Color(0.109804, 0.619608, 0.490196, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
@@ -81,10 +69,6 @@ offset_left = -263.0
 offset_top = -153.0
 offset_right = 263.0
 offset_bottom = 153.0
-offset_left = -221.5
-offset_top = -98.5
-offset_right = 221.5
-offset_bottom = 98.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 9
@@ -103,14 +87,6 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_xjsua")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3snf5")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_jecxl")
 theme_override_styles/normal = SubResource("StyleBoxFlat_smk4a")
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
-theme_override_styles/focus = SubResource("StyleBoxEmpty_am14h")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_samfi")
-theme_override_styles/hover = SubResource("StyleBoxFlat_e0w7v")
-theme_override_styles/normal = SubResource("StyleBoxFlat_3aacs")
 text = "PLAY"
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
@@ -126,14 +102,6 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_xjsua")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3snf5")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_jecxl")
 theme_override_styles/normal = SubResource("StyleBoxFlat_smk4a")
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
-theme_override_styles/focus = SubResource("StyleBoxEmpty_am14h")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_samfi")
-theme_override_styles/hover = SubResource("StyleBoxFlat_e0w7v")
-theme_override_styles/normal = SubResource("StyleBoxFlat_3aacs")
 text = "CREDITS"
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
@@ -173,12 +141,3 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_vjk8e")
 text = "JIVAN"
 horizontal_alignment = 1
 vertical_alignment = 1
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
-theme_override_styles/focus = SubResource("StyleBoxEmpty_am14h")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_samfi")
-theme_override_styles/hover = SubResource("StyleBoxFlat_e0w7v")
-theme_override_styles/normal = SubResource("StyleBoxFlat_3aacs")
-text = "EXIT"
