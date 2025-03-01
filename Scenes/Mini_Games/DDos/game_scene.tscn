@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1yh1io07goqj"]
+
+[ext_resource type="Script" path="res://Scripts/mini_game/ddos/game_scene.gd" id="1_d7vuc"]
+
+[node name="ddos" type="Node2D"]
+script = ExtResource("1_d7vuc")
+
+[node name="GameTimer" type="Timer" parent="."]
+wait_time = 60.0
+one_shot = true
+autostart = true
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Score:0"
+
+[node name="LoadBar" type="ProgressBar" parent="."]
+offset_left = 259.0
+offset_top = 5.0
+offset_right = 396.0
+offset_bottom = 32.0
+step = 1.0
+
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 1.5
+autostart = true
+
+[node name="TimerLabel" type="Label" parent="."]
+offset_left = 95.0
+offset_top = 4.0
+offset_right = 156.0
+offset_bottom = 27.0
+text = "Time:40"
+
+[node name="CountdownTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="CPULoadLabel" type="Label" parent="."]
+offset_left = 411.0
+offset_top = 8.0
+offset_right = 518.0
+offset_bottom = 31.0
+text = "Health:0%"
