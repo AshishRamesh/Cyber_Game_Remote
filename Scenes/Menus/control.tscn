@@ -1,8 +1,14 @@
 [gd_scene load_steps=5 format=3 uid="uid://cgno5rqnbdu"]
 
+<<<<<<< Updated upstream
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4kbyh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6mmfm"]
+=======
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_am14h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_samfi"]
+>>>>>>> Stashed changes
 bg_color = Color(0.0431373, 0.32549, 0.254902, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0w7v"]
@@ -46,8 +52,13 @@ theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
+<<<<<<< Updated upstream
 theme_override_styles/focus = SubResource("StyleBoxEmpty_4kbyh")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_6mmfm")
+=======
+theme_override_styles/focus = SubResource("StyleBoxEmpty_am14h")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_samfi")
+>>>>>>> Stashed changes
 theme_override_styles/hover = SubResource("StyleBoxFlat_e0w7v")
 theme_override_styles/normal = SubResource("StyleBoxFlat_3aacs")
 text = "PLAY"
@@ -58,8 +69,13 @@ theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
+<<<<<<< Updated upstream
 theme_override_styles/focus = SubResource("StyleBoxEmpty_4kbyh")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_6mmfm")
+=======
+theme_override_styles/focus = SubResource("StyleBoxEmpty_am14h")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_samfi")
+>>>>>>> Stashed changes
 theme_override_styles/hover = SubResource("StyleBoxFlat_e0w7v")
 theme_override_styles/normal = SubResource("StyleBoxFlat_3aacs")
 text = "CREDITS"
@@ -70,8 +86,13 @@ theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
+<<<<<<< Updated upstream
 theme_override_styles/focus = SubResource("StyleBoxEmpty_4kbyh")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_6mmfm")
+=======
+theme_override_styles/focus = SubResource("StyleBoxEmpty_am14h")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_samfi")
+>>>>>>> Stashed changes
 theme_override_styles/hover = SubResource("StyleBoxFlat_e0w7v")
 theme_override_styles/normal = SubResource("StyleBoxFlat_3aacs")
 text = "EXIT"
