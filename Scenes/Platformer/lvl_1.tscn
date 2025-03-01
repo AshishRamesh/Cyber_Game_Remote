@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://la7mnqtqhdfj"]
+[gd_scene load_steps=6 format=3 uid="uid://kpgmxyj5vc2c"]
 
-[ext_resource type="PackedScene" uid="uid://j65lk7vt3oms" path="res://Scenes/Platformer/Player.tscn" id="1_yemfr"]
+[ext_resource type="PackedScene" path="res://Scenes/Platformer/Player.tscn" id="1_yemfr"]
 [ext_resource type="Texture2D" uid="uid://dur6idjg3c46" path="res://assets/World Files/Warped City/V1/warped city files/ENVIRONMENT/tileset.png" id="2_binxk"]
-[ext_resource type="PackedScene" uid="uid://gdv1e5gvq5ci" path="res://Scenes/Platformer/platform.tscn" id="3_10di8"]
+[ext_resource type="PackedScene" path="res://Scenes/Platformer/platform.tscn" id="3_10di8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sa44g"]
 texture = ExtResource("2_binxk")

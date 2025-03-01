@@ -41,7 +41,7 @@ func spawn_websites():
 	if game_over_state:
 		return  # Don't spawn websites after game over
 
-	var website_scene = load("res://Website.tscn")
+	var website_scene = load("res://Scenes/Mini_Games/DDos/website.tscn")
 	if website_scene is PackedScene:
 		var website_instance = website_scene.instantiate()
 
@@ -124,7 +124,7 @@ func game_over(message):
 	print(message + " Final Score: " + str(score))
 	Global.final_score = score  # Store the final score in Global script
 	# Load End Scene and Pass Score
-	get_tree().change_scene_to_file("res://end_scene.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Mini_Games/DDos/end_scene.tscn")
 
 	game_over_state = true  # Stop game logic
 
