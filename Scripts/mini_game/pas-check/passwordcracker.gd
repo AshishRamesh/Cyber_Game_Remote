@@ -7,7 +7,7 @@ var attempts = 3
 @onready var animated_sprite: AnimatedSprite2D = $computer_pwd_chk/AnimatedSprite2D
 
 # Load ❌ icon for wrong attempts
-var wrong_icon = preload("res://icon.svg")  # Update the correct path
+var wrong_icon = preload("res://assets/Props/keyboard_x_1.svg")  # Update the correct path
 
 # Store references to attempt icons
 var attempt_boxes = []  
@@ -60,7 +60,7 @@ func display_hashes():
  
 
 func generate_meaningful_password():
-	var words = ["CODE", "PLAY", "HERO", "DATA", "LOVE", "SAFE", "WORLD", "HELLO", "GODOT"]
+	var words = ["PASSWORD", "ADMIN", "LETMEIN", "DATA", "QWERTY", "SAFE", "WORLD", "HELLO", "GODOT","TEAMJASN"]
 	correct_password = words[randi() % words.size()]
 	hashed_password = ""  
 
@@ -82,11 +82,7 @@ func _on_PasswordInput_text_submitted(user_input: String):
 
 	if user_hash == hashed_password:
 		$FeedbackLabel.text = "✅ Correct! You cracked the code!"
-<<<<<<< Updated upstream
 		get_tree().change_scene_to_file("res://Scenes/Platformer/lvl_1.tscn") 
-=======
-		#get_tree().change_scene_to_file("res://Scenes/Menus/you_won.tscn") 
->>>>>>> Stashed changes
 		
 		#await get_tree().create_timer(1).timeout  
 
