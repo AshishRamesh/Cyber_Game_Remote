@@ -1,0 +1,89 @@
+[gd_scene load_steps=10 format=3 uid="uid://0maii6dt5iia"]
+
+[ext_resource type="Texture2D" uid="uid://bo6pt834kaecn" path="res://assets/World Files/Warped City/V1/warped city files/ENVIRONMENT/background/skyline-b.png" id="1_van04"]
+[ext_resource type="FontFile" uid="uid://y8cdy6s8ygda" path="res://assets/Fonts/m42.TTF" id="2_gt6sh"]
+[ext_resource type="FontFile" uid="uid://dmujmael4nlo1" path="res://assets/Fonts/Vermin Vibes 1989.ttf" id="3_opqqe"]
+
+[sub_resource type="GDScript" id="GDScript_37hq3"]
+script/source = "extends Control
+
+
+
+
+func _on_press_enter_to_continue_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Scenes/Menus/control.tscn\")# Replace with function body.
+"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_02au8"]
+texture = ExtResource("1_van04")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_76t17"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6omlb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_odt7t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vyboo"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_37hq3")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_02au8")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -214.5
+offset_top = -118.5
+offset_right = 214.5
+offset_bottom = 118.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.906521, 0.834418, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.493309, 0.493309, 0.493309, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_fonts/font = ExtResource("2_gt6sh")
+theme_override_font_sizes/font_size = 78
+text = "GAME
+OVER"
+horizontal_alignment = 1
+vertical_alignment = 3
+
+[node name="press_to_continue" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -278.0
+offset_top = 557.0
+offset_right = 278.0
+offset_bottom = 656.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_opqqe")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_76t17")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6omlb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_odt7t")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vyboo")
+text = "PRESS ENTER TO CONTINUE"

@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://dmge06cu7tvwn"]
+
+[ext_resource type="Script" path="res://Scripts/menu/computer_pwd_chk.gd" id="1_jjscn"]
+[ext_resource type="Texture2D" uid="uid://dfnj7avj05l28" path="res://assets/Computer/Attack.png" id="2_ondpx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n84v0"]
+atlas = ExtResource("2_ondpx")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jqs1"]
+atlas = ExtResource("2_ondpx")
+region = Rect2(80, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8jab"]
+atlas = ExtResource("2_ondpx")
+region = Rect2(160, 0, 80, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pqur6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n84v0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jqs1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h8jab")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nyk5u"]
+radius = 7.0
+
+[node name="computer-pwd_chk" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_jjscn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_pqur6")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 10)
+shape = SubResource("CircleShape2D_nyk5u")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
