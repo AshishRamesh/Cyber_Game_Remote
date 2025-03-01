@@ -1,7 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d220hcrtp2scl"]
 
 [ext_resource type="Script" path="res://Scripts/mini_game/ddos/Website.gd" id="1_hlecc"]
-[gd_scene format=3 uid="uid://d220hcrtp2scl"]
 
 [node name="Website" type="Button"]
 offset_left = 64.0
