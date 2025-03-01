@@ -13,28 +13,31 @@ modulate_color = Color(0.750489, 0.750489, 0.750489, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3snf5"]
 bg_color = Color(0.0779327, 0.469171, 0.369016, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
+skew = Vector2(1, 0)
+border_width_left = 7
+border_width_top = 9
+border_width_right = 9
+border_width_bottom = 7
 shadow_size = 5
 shadow_offset = Vector2(2, 2)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jecxl"]
 bg_color = Color(1, 0.831373, 0.290196, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
+skew = Vector2(1, 0)
+border_width_left = 7
+border_width_top = 9
+border_width_right = 9
+border_width_bottom = 7
 shadow_size = 5
 shadow_offset = Vector2(2, 2)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_smk4a"]
 bg_color = Color(0, 1, 0.966667, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
+skew = Vector2(1, 0)
+border_width_left = 7
+border_width_top = 9
+border_width_right = 9
+border_width_bottom = 7
 shadow_size = 5
 shadow_offset = Vector2(2, 2)
 
@@ -73,7 +76,7 @@ offset_right = 263.0
 offset_bottom = 153.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 9
+theme_override_constants/separation = 16
 
 [node name="play_button" type="Button" parent="VBoxContainer"]
 layout_mode = 2

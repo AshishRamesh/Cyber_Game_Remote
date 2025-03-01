@@ -1,0 +1,128 @@
+[gd_scene load_steps=10 format=3 uid="uid://co0hula8pgqxb"]
+
+[ext_resource type="Texture2D" uid="uid://cpq3qdfhjjbes" path="res://assets/World Files/Warped City/V1/warped city files/ENVIRONMENT/background/skyline-a.png" id="1_hxx20"]
+[ext_resource type="FontFile" uid="uid://dmujmael4nlo1" path="res://assets/Fonts/Vermin Vibes 1989.ttf" id="2_uvb7n"]
+[ext_resource type="FontFile" uid="uid://db67b11v1r2hx" path="res://assets/Fonts/Minecrafter.Alt.ttf" id="3_wvj1c"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7iy4c"]
+texture = ExtResource("1_hxx20")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a8gbt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_64tnn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fslal"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1hcs1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j6ki3"]
+bg_color = Color(0, 0, 0, 0.298039)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.905882, 0.835294, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="ddos" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bg" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_7iy4c")
+
+[node name="press_to_continue" type="Button" parent="bg"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -278.0
+offset_top = 557.0
+offset_right = 278.0
+offset_bottom = 656.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_uvb7n")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_a8gbt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_64tnn")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fslal")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1hcs1")
+text = "PRESS ENTER TO CONTINUE"
+
+[node name="yellow_boader" type="Panel" parent="bg"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1015.0
+offset_top = -524.5
+offset_right = 1015.0
+offset_bottom = 524.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_j6ki3")
+metadata/_edit_lock_ = true
+
+[node name="content" type="Label" parent="bg/yellow_boader"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -953.0
+offset_top = -420.0
+offset_right = 953.0
+offset_bottom = 322.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_wvj1c")
+theme_override_font_sizes/font_size = 39
+text = "The city is under attack! Malicious bots are flooding the system with fake 
+requests. As the cybersecurity expert, your job is to block harmful traffic 
+before it crashes the system!
+
+How to Play: 
+
+- Websites will drop from the top of the screen.
+- Click on malicious sites (e.g., gogle.com, faceboook.com) to block them.
+- Be careful! Blocking a real website (e.g., google.com, facebook.com) will 
+  increase CPU load.
+- If CPU load reaches 100%, the system crashes and you lose!
+- Survive until the timer runs out to win!
+
+Tip: Stay sharp—malicious sites look almost identical to real ones!
+"
+
+[node name="heading" type="Label" parent="bg"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -229.0
+offset_top = 86.0
+offset_right = 302.0
+offset_bottom = 208.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_uvb7n")
+theme_override_font_sizes/font_size = 110
+text = "DDoS DEFENDER"
+horizontal_alignment = 1
