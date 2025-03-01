@@ -1,7 +1,36 @@
-[gd_scene load_steps=8 format=3 uid="uid://dmge06cu7tvwn"]
+[gd_scene load_steps=16 format=3 uid="uid://dmge06cu7tvwn"]
 
 [ext_resource type="Script" path="res://Scripts/menu/computer_pwd_chk.gd" id="1_jjscn"]
 [ext_resource type="Texture2D" uid="uid://dfnj7avj05l28" path="res://assets/Computer/Attack.png" id="2_ondpx"]
+[ext_resource type="Texture2D" uid="uid://bhy0myhcj4s37" path="res://assets/Computer/Death.png" id="2_wmt8p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qy5kb"]
+atlas = ExtResource("2_wmt8p")
+region = Rect2(80, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8bc57"]
+atlas = ExtResource("2_wmt8p")
+region = Rect2(160, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_llj21"]
+atlas = ExtResource("2_wmt8p")
+region = Rect2(240, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eulsi"]
+atlas = ExtResource("2_wmt8p")
+region = Rect2(320, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3e41y"]
+atlas = ExtResource("2_wmt8p")
+region = Rect2(400, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kb28g"]
+atlas = ExtResource("2_wmt8p")
+region = Rect2(480, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d5588"]
+atlas = ExtResource("2_wmt8p")
+region = Rect2(560, 0, 80, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n84v0"]
 atlas = ExtResource("2_ondpx")
@@ -17,6 +46,32 @@ region = Rect2(160, 0, 80, 80)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pqur6"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qy5kb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8bc57")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_llj21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eulsi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3e41y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kb28g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d5588")
+}],
+"loop": false,
+"name": &"completed",
+"speed": 7.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_n84v0")
@@ -35,13 +90,17 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_nyk5u"]
 radius = 7.0
 
-[node name="computer-pwd_chk" type="Area2D"]
+[node name="computer_pwd_chk" type="Area2D"]
 collision_mask = 2
 script = ExtResource("1_jjscn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-6, -5)
 sprite_frames = SubResource("SpriteFrames_pqur6")
+animation = &"completed"
 autoplay = "default"
+frame = 6
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 10)

@@ -1,4 +1,5 @@
 extends CharacterBody2D
+@onready var player: CharacterBody2D = $"."
 
 
 const SPEED = 130.0
@@ -40,6 +41,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	elif is_on_floor():
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+	Global.player_position.x = player.position.x
+	Global.player_position.y = player.position.y
 	move_and_slide()
 	platVel = get_platform_velocity()

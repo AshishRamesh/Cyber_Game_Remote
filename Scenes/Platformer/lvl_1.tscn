@@ -1,5 +1,6 @@
-[gd_scene load_steps=28 format=3 uid="uid://la7mnqtqhdfj"]
+[gd_scene load_steps=29 format=3 uid="uid://la7mnqtqhdfj"]
 
+[ext_resource type="Script" path="res://Scenes/Platformer/lvl_1.gd" id="1_dedu7"]
 [ext_resource type="PackedScene" uid="uid://j65lk7vt3oms" path="res://Scenes/Platformer/Player.tscn" id="1_yemfr"]
 [ext_resource type="Texture2D" uid="uid://dur6idjg3c46" path="res://assets/World Files/Warped City/V1/warped city files/ENVIRONMENT/tileset.png" id="2_binxk"]
 [ext_resource type="PackedScene" uid="uid://gdv1e5gvq5ci" path="res://Scenes/Platformer/platform.tscn" id="3_10di8"]
@@ -11,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://tnudht4lbruh" path="res://Scenes/Platformer/platform_lr.tscn" id="10_3f4pp"]
 [ext_resource type="PackedScene" uid="uid://bn0gqbgpd1gk5" path="res://Scenes/Platformer/platform_up_down.tscn" id="11_456jw"]
 [ext_resource type="PackedScene" uid="uid://dmge06cu7tvwn" path="res://Scenes/Platformer/computer_pwd_chk.tscn" id="11_db5mx"]
-[ext_resource type="PackedScene" path="res://Scenes/Platformer/enemy.tscn" id="12_7vpin"]
+[ext_resource type="PackedScene" uid="uid://0rurickf46sk" path="res://Scenes/Platformer/enemy.tscn" id="12_7vpin"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sa44g"]
 texture = ExtResource("2_binxk")
@@ -286,6 +287,7 @@ _data = {
 }
 
 [node name="lvl_1" type="Node2D"]
+script = ExtResource("1_dedu7")
 
 [node name="Player" parent="." instance=ExtResource("1_yemfr")]
 z_index = 1
