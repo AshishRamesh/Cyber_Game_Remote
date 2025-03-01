@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://j65lk7vt3oms"]
+[gd_scene load_steps=9 format=3 uid="uid://j65lk7vt3oms"]
 
+[ext_resource type="Script" path="res://Scripts/Platformer/player.gd" id="1_78e1j"]
 [ext_resource type="Texture2D" uid="uid://dw2or8nbss84l" path="res://assets/Player/Cyborg_idle.png" id="1_cmula"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kmlpc"]
@@ -43,6 +44,7 @@ radius = 7.0
 height = 26.0
 
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_78e1j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_l4ivu")
@@ -55,3 +57,4 @@ shape = SubResource("CapsuleShape2D_pxw75")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
+position_smoothing_enabled = true
