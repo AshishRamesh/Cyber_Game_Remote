@@ -49,10 +49,11 @@ vertical_alignment = 1
 
 [node name="PasswordInput" type="LineEdit" parent="."]
 layout_mode = 0
-offset_left = 694.0
-offset_top = 508.0
-offset_right = 1262.0
-offset_bottom = 627.0
+offset_left = 684.0
+offset_top = 463.0
+offset_right = 1252.0
+offset_bottom = 582.0
+theme_override_font_sizes/font_size = 50
 
 [node name="TimerLabel" type="Label" parent="."]
 layout_mode = 0
@@ -72,9 +73,9 @@ autostart = true
 
 [node name="FeedbackLabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 716.0
-offset_top = 685.0
-offset_right = 1258.0
-offset_bottom = 755.0
+offset_left = 560.0
+offset_top = 659.0
+offset_right = 1102.0
+offset_bottom = 729.0
 theme_override_fonts/font = ExtResource("5_1ysof")
 theme_override_font_sizes/font_size = 35
