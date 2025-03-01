@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://3vromwxv3yhk"]
+
+[node name="ExplosionParticles" type="GPUParticles2D"]
+amount = 50
+lifetime = 0.5
+speed_scale = 3.0
+explosiveness = 1.0

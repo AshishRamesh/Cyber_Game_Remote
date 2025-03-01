@@ -1,12 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://d220hcrtp2scl"]
+[gd_scene load_steps=4 format=3 uid="uid://d220hcrtp2scl"]
 
 [ext_resource type="Script" path="res://Scripts/mini_game/ddos/Website.gd" id="1_hlecc"]
+[ext_resource type="FontFile" uid="uid://ckatrk35lxxwl" path="res://assets/Fonts/Minecrafter.Reg.ttf" id="1_i34s0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tient"]
+bg_color = Color(1, 0.340039, 0.304099, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_right = 10
+corner_radius_bottom_left = 10
 
 [node name="Website" type="Button"]
-offset_left = 64.0
-offset_top = 4.0
-offset_right = 119.0
-offset_bottom = 59.0
+offset_left = 317.0
+offset_top = 6.0
+offset_right = 414.0
+offset_bottom = 61.0
+theme_override_fonts/font = ExtResource("1_i34s0")
+theme_override_styles/normal = SubResource("StyleBoxFlat_tient")
 text = "example
 "
 script = ExtResource("1_hlecc")

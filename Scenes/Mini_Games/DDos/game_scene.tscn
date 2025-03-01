@@ -1,9 +1,64 @@
-[gd_scene load_steps=2 format=3 uid="uid://d1yh1io07goqj"]
+[gd_scene load_steps=10 format=3 uid="uid://d1yh1io07goqj"]
 
 [ext_resource type="Script" path="res://Scripts/mini_game/ddos/game_scene.gd" id="1_d7vuc"]
+[ext_resource type="FontFile" uid="uid://db67b11v1r2hx" path="res://assets/Fonts/Minecrafter.Alt.ttf" id="2_4atyg"]
+[ext_resource type="FontFile" uid="uid://ma1j7da4mhsj" path="res://assets/Fonts/pixel_lcd_7.ttf" id="3_wj87v"]
+[ext_resource type="Texture2D" uid="uid://d2iw2r05sfuyh" path="res://assets/World Files/Background/Rectangle 2.png" id="4_8q4k6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2iirx"]
+bg_color = Color(0.0986259, 0.140991, 0.245324, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pp02m"]
+bg_color = Color(0.927902, 0.91368, 0.921847, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 1.0
+shadow_size = 3
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ndfei"]
+bg_color = Color(0.909926, 0.25326, 0.295899, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iwdsn"]
+bg_color = Color(0.0980392, 0.141176, 0.247059, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gbm11"]
+bg_color = Color(0.0980392, 0.141176, 0.247059, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
 
 [node name="ddos" type="Node2D"]
 script = ExtResource("1_d7vuc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = -1
+offset_left = -41.0
+offset_top = -14.0
+offset_right = 2859.0
+offset_bottom = 1588.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = ExtResource("4_8q4k6")
+stretch_mode = 6
+metadata/_edit_group_ = true
 
 [node name="GameTimer" type="Timer" parent="."]
 wait_time = 60.0
@@ -11,15 +66,25 @@ one_shot = true
 autostart = true
 
 [node name="ScoreLabel" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+z_index = 2
+offset_left = 141.0
+offset_top = 18.0
+offset_right = 255.0
+offset_bottom = 49.0
+theme_override_fonts/font = ExtResource("2_4atyg")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_2iirx")
 text = "Score:0"
+horizontal_alignment = 1
 
 [node name="LoadBar" type="ProgressBar" parent="."]
-offset_left = 259.0
-offset_top = 5.0
-offset_right = 396.0
-offset_bottom = 32.0
+z_index = 2
+offset_left = 1095.0
+offset_top = 25.0
+offset_right = 1232.0
+offset_bottom = 52.0
+theme_override_styles/background = SubResource("StyleBoxFlat_pp02m")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ndfei")
 step = 1.0
 
 [node name="SpawnTimer" type="Timer" parent="."]
@@ -27,18 +92,26 @@ wait_time = 1.5
 autostart = true
 
 [node name="TimerLabel" type="Label" parent="."]
-offset_left = 95.0
-offset_top = 4.0
-offset_right = 156.0
-offset_bottom = 27.0
+z_index = 2
+offset_left = 603.0
+offset_top = 17.0
+offset_right = 706.0
+offset_bottom = 47.0
+theme_override_fonts/font = ExtResource("3_wj87v")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxFlat_iwdsn")
 text = "Time:40"
 
 [node name="CountdownTimer" type="Timer" parent="."]
 autostart = true
 
 [node name="CPULoadLabel" type="Label" parent="."]
-offset_left = 411.0
-offset_top = 8.0
-offset_right = 518.0
-offset_bottom = 31.0
+z_index = 2
+offset_left = 955.0
+offset_top = 24.0
+offset_right = 1071.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_4atyg")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_gbm11")
 text = "Health:0%"

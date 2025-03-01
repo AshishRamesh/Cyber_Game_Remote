@@ -141,3 +141,8 @@ func game_over(message):
 	for child in get_children():
 		if child.name.begins_with("Website"):  # Assuming websites are named dynamically
 			child.queue_free()
+			
+func screen_shake():
+	var tween = create_tween()
+	tween.tween_property($MainCamera, "offset", Vector2(randf_range(-5, 5), randf_range(-5, 5)), 0.05)
+	tween.tween_property($MainCamera, "offset", Vector2(0, 0), 0.05)			
