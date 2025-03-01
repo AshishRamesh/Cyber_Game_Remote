@@ -1,27 +1,44 @@
-[gd_scene load_steps=5 format=3 uid="uid://cgno5rqnbdu"]
+[gd_scene load_steps=10 format=3 uid="uid://cgno5rqnbdu"]
 
-<<<<<<< Updated upstream
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4kbyh"]
+[ext_resource type="Texture2D" uid="uid://cpq3qdfhjjbes" path="res://assets/World Files/Warped City/V1/warped city files/ENVIRONMENT/background/skyline-a.png" id="1_n86ms"]
+[ext_resource type="FontFile" uid="uid://dmujmael4nlo1" path="res://assets/Fonts/Vermin Vibes 1989.ttf" id="2_iajgf"]
+[ext_resource type="FontFile" uid="uid://y8cdy6s8ygda" path="res://assets/Fonts/m42.TTF" id="3_5s21b"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6mmfm"]
-=======
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_am14h"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5q6sv"]
+texture = ExtResource("1_n86ms")
+modulate_color = Color(0.750489, 0.750489, 0.750489, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_samfi"]
->>>>>>> Stashed changes
-bg_color = Color(0.0431373, 0.32549, 0.254902, 1)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xjsua"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0w7v"]
-bg_color = Color(0.0748062, 0.455662, 0.358113, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3aacs"]
-bg_color = Color(0.109804, 0.619608, 0.490196, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3snf5"]
+bg_color = Color(0.0779327, 0.469171, 0.369016, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 shadow_size = 5
 shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jecxl"]
+bg_color = Color(0.0605113, 0.395547, 0.309565, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_smk4a"]
+bg_color = Color(0.93865, 0.347748, 7.70092e-07, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vjk8e"]
+modulate_color = Color(0.496337, 0.496337, 0.496337, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -31,6 +48,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_5q6sv")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -38,61 +65,79 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -221.5
-offset_top = -98.5
-offset_right = 221.5
-offset_bottom = 98.5
+offset_left = -263.0
+offset_top = -153.0
+offset_right = 263.0
+offset_bottom = 153.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 9
 
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
-<<<<<<< Updated upstream
-theme_override_styles/focus = SubResource("StyleBoxEmpty_4kbyh")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_6mmfm")
-=======
-theme_override_styles/focus = SubResource("StyleBoxEmpty_am14h")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_samfi")
->>>>>>> Stashed changes
-theme_override_styles/hover = SubResource("StyleBoxFlat_e0w7v")
-theme_override_styles/normal = SubResource("StyleBoxFlat_3aacs")
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("2_iajgf")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xjsua")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3snf5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jecxl")
+theme_override_styles/normal = SubResource("StyleBoxFlat_smk4a")
 text = "PLAY"
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
-<<<<<<< Updated upstream
-theme_override_styles/focus = SubResource("StyleBoxEmpty_4kbyh")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_6mmfm")
-=======
-theme_override_styles/focus = SubResource("StyleBoxEmpty_am14h")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_samfi")
->>>>>>> Stashed changes
-theme_override_styles/hover = SubResource("StyleBoxFlat_e0w7v")
-theme_override_styles/normal = SubResource("StyleBoxFlat_3aacs")
+theme_override_fonts/font = ExtResource("2_iajgf")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xjsua")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3snf5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jecxl")
+theme_override_styles/normal = SubResource("StyleBoxFlat_smk4a")
 text = "CREDITS"
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
-<<<<<<< Updated upstream
-theme_override_styles/focus = SubResource("StyleBoxEmpty_4kbyh")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_6mmfm")
-=======
-theme_override_styles/focus = SubResource("StyleBoxEmpty_am14h")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_samfi")
->>>>>>> Stashed changes
-theme_override_styles/hover = SubResource("StyleBoxFlat_e0w7v")
-theme_override_styles/normal = SubResource("StyleBoxFlat_3aacs")
+theme_override_fonts/font = ExtResource("2_iajgf")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xjsua")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3snf5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jecxl")
+theme_override_styles/normal = SubResource("StyleBoxFlat_smk4a")
 text = "EXIT"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -251.0
+offset_top = -418.0
+offset_right = 251.0
+offset_bottom = -328.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.616573, 0.616573, 0.616573, 1)
+theme_override_constants/shadow_offset_x = 9
+theme_override_constants/shadow_offset_y = 8
+theme_override_fonts/font = ExtResource("3_5s21b")
+theme_override_font_sizes/font_size = 116
+theme_override_styles/normal = SubResource("StyleBoxTexture_vjk8e")
+text = "JIVAN"
+horizontal_alignment = 1
+vertical_alignment = 1
