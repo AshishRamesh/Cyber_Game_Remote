@@ -82,7 +82,11 @@ func _on_PasswordInput_text_submitted(user_input: String):
 
 	if user_hash == hashed_password:
 		$FeedbackLabel.text = "✅ Correct! You cracked the code!"
+<<<<<<< Updated upstream
 		get_tree().change_scene_to_file("res://Scenes/Platformer/lvl_1.tscn") 
+=======
+		#get_tree().change_scene_to_file("res://Scenes/Menus/you_won.tscn") 
+>>>>>>> Stashed changes
 		
 		#await get_tree().create_timer(1).timeout  
 

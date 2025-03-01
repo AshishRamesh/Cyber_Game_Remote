@@ -13,10 +13,13 @@
 [ext_resource type="PackedScene" uid="uid://bn0gqbgpd1gk5" path="res://Scenes/Platformer/platform_up_down.tscn" id="11_456jw"]
 [ext_resource type="PackedScene" uid="uid://dmge06cu7tvwn" path="res://Scenes/Platformer/computer_pwd_chk.tscn" id="11_db5mx"]
 [ext_resource type="PackedScene" uid="uid://0rurickf46sk" path="res://Scenes/Platformer/enemy.tscn" id="12_7vpin"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" path="res://Scenes/Platformer/platform_lr.tscn" id="10_3f4pp"]
 [ext_resource type="PackedScene" path="res://Scenes/Platformer/platform_up_down.tscn" id="11_456jw"]
 [ext_resource type="PackedScene" path="res://Scenes/Platformer/computer_pwd_chk.tscn" id="11_db5mx"]
 [ext_resource type="PackedScene" path="res://Scenes/Platformer/enemy.tscn" id="12_7vpin"]
+=======
+>>>>>>> Stashed changes
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sa44g"]
 texture = ExtResource("2_binxk")
