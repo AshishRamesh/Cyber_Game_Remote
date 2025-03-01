@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://ckewyumb2rcl6"]
+
+[node name="ddos" type="Node2D"]
+
+[node name="GameTimer" type="Timer" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="LoadBar" type="ProgressBar" parent="."]
+offset_left = 203.0
+offset_top = 2.0
+offset_right = 285.0
+offset_bottom = 29.0
+
+[node name="SpawnTimer" type="Timer" parent="."]
+
+[node name="TimerLabel" type="Label" parent="."]
+offset_left = 148.0
+offset_top = 6.0
+offset_right = 188.0
+offset_bottom = 29.0
+
+[node name="CountdownTimer" type="Timer" parent="."]
+
+[node name="CPULoadLabel" type="Label" parent="."]
+offset_left = 76.0
+offset_top = 6.0
+offset_right = 196.0
+offset_bottom = 29.0
