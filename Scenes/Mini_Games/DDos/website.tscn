@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://d220hcrtp2scl"]
+
+[node name="Website" type="Button"]
+offset_left = 64.0
+offset_top = 4.0
+offset_right = 119.0
+offset_bottom = 59.0
+text = "example
+"
