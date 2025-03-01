@@ -46,7 +46,6 @@ corner_radius_bottom_right = 5
 script = ExtResource("1_d7vuc")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-anchors_preset = -1
 offset_left = -41.0
 offset_top = -14.0
 offset_right = 2859.0

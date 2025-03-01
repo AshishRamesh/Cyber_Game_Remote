@@ -6,7 +6,7 @@ var hashed_password = ""
 var attempts = 3  
 
 # Load ❌ icon for wrong attempts
-var wrong_icon = preload("res://icon.svg")  # Update the correct path
+var wrong_icon = preload("res://assets/Props/keyboard_x_1.svg")  # Update the correct path
 
 # Store references to attempt icons
 var attempt_boxes = []  
@@ -59,7 +59,7 @@ func display_hashes():
  
 
 func generate_meaningful_password():
-	var words = ["CODE", "PLAY", "HERO", "DATA", "LOVE", "SAFE", "WORLD", "HELLO", "GODOT"]
+	var words = ["PASSWORD", "ADMIN", "LETMEIN", "DATA", "QWERTY", "SAFE", "WORLD", "HELLO", "GODOT","TEAMJASN"]
 	correct_password = words[randi() % words.size()]
 	hashed_password = ""  
 
