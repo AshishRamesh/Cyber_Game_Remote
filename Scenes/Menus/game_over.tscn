@@ -61,7 +61,7 @@ theme_override_colors/font_shadow_color = Color(0.493309, 0.493309, 0.493309, 1)
 theme_override_constants/shadow_offset_x = 4
 theme_override_constants/shadow_offset_y = 4
 theme_override_fonts/font = ExtResource("2_lrnl0")
-theme_override_font_sizes/font_size = 78
+theme_override_font_sizes/font_size = 130
 text = "GAME
 OVER"
 horizontal_alignment = 1

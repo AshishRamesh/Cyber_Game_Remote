@@ -11,9 +11,10 @@ config_version=5
 [application]
 
 config/name="Cyber_Security_Game"
-run/main_scene="res://Scenes/Menus/game_over.tscn"
+run/main_scene="res://Scenes/Menus/ddos.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
+<<<<<<<Updatedupstreamrun/main_scene="res://Scenes/Menus/game_over.tscn"
 
 [display]
 
