@@ -1,0 +1,103 @@
+[gd_scene load_steps=7 format=3 uid="uid://bxtvy0kdsqivo"]
+
+[ext_resource type="Script" path="res://Scripts/mini_game/strong_pass/strongpass.gd" id="1_f66y2"]
+[ext_resource type="Texture2D" uid="uid://cpq3qdfhjjbes" path="res://assets/World Files/Warped City/V1/warped city files/ENVIRONMENT/background/skyline-a.png" id="2_yrdg4"]
+[ext_resource type="FontFile" uid="uid://ma1j7da4mhsj" path="res://assets/Fonts/pixel_lcd_7.ttf" id="3_d77y6"]
+[ext_resource type="FontFile" uid="uid://db67b11v1r2hx" path="res://assets/Fonts/Minecrafter.Alt.ttf" id="4_qw6x0"]
+[ext_resource type="FontFile" uid="uid://dmujmael4nlo1" path="res://assets/Fonts/Vermin Vibes 1989.ttf" id="5_1ysof"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r4xr5"]
+texture = ExtResource("2_yrdg4")
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 1.0
+offset_right = 16.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f66y2")
+
+[node name="bg" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -11.0
+offset_top = -3.0
+offset_right = -14.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_r4xr5")
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 244.0
+offset_right = 679.0
+offset_bottom = 412.0
+theme_override_fonts/font = ExtResource("3_d77y6")
+theme_override_font_sizes/font_size = 45
+text = "STRONG PASSWORD MAKER "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CautionLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -510.0
+offset_top = 33.0
+offset_right = 510.0
+offset_bottom = 101.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_qw6x0")
+theme_override_font_sizes/font_size = 50
+text = "\"Your password must be 8-12 characters long!\"
+"
+
+[node name="PasswordInput" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 720.0
+offset_top = 889.0
+offset_right = 1176.0
+offset_bottom = 949.0
+
+[node name="TimerLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 777.0
+offset_right = 1001.0
+offset_bottom = 863.0
+theme_override_fonts/font = ExtResource("5_1ysof")
+theme_override_font_sizes/font_size = 40
+text = "Time Left: 60"
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 60.0
+autostart = true
+
+[node name="SubmitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1015.0
+offset_top = 771.0
+offset_right = 1149.0
+offset_bottom = 804.0
+theme_override_font_sizes/font_size = 30
+text = "Check Password"
+
+[node name="FeedbackLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 703.0
+offset_top = 602.0
+offset_right = 1245.0
+offset_bottom = 672.0
+theme_override_font_sizes/font_size = 35
+text = "\"\""
