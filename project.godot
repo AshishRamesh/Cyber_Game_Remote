@@ -11,13 +11,9 @@ config_version=5
 [application]
 
 config/name="Cyber_Security_Game"
-run/main_scene="res://Scenes/Menus/you_won.tscn"
+run/main_scene="res://Scenes/Menus/game_over.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
-
-[autoload]
-
-Global="*res://Scripts/mini_game/ddos/Global.gd"
 
 [display]
 
