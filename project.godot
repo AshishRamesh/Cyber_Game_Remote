@@ -12,6 +12,7 @@ config_version=5
 
 config/name="Cyber_Security_Game"
 run/main_scene="res://Scenes/Menus/control.tscn"
+run/main_scene="res://Scenes/Platformer/game.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
