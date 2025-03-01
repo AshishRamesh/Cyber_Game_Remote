@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://tnudht4lbruh"]
+
+[ext_resource type="Texture2D" uid="uid://dur6idjg3c46" path="res://assets/World Files/Warped City/V1/warped city files/ENVIRONMENT/tileset.png" id="1_tutq1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wnyvh"]
+size = Vector2(46, 16)
+
+[node name="Platform_lr" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_tutq1")
+region_enabled = true
+region_rect = Rect2(104.918, 175.459, 46.4849, 16.7562)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wnyvh")
+one_way_collision = true
