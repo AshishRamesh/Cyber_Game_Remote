@@ -134,3 +134,6 @@ layer_0/tile_data = PackedInt32Array(131071, 458752, 11, 65536, 458752, 11, 6553
 
 [node name="Platform" parent="." instance=ExtResource("3_10di8")]
 position = Vector2(450, -24)
+
+[node name="Platform2" parent="." instance=ExtResource("3_10di8")]
+position = Vector2(496, -24)
