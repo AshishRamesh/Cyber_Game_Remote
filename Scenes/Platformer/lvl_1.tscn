@@ -1,10 +1,13 @@
+[gd_scene load_steps=15 format=3 uid="uid://la7mnqtqhdfj"]
 
-[gd_scene load_steps=6 format=3 uid="uid://kpgmxyj5vc2c"]
-
-
-[ext_resource type="PackedScene" path="res://Scenes/Platformer/Player.tscn" id="1_yemfr"]
+[ext_resource type="PackedScene" uid="uid://j65lk7vt3oms" path="res://Scenes/Platformer/Player.tscn" id="1_yemfr"]
 [ext_resource type="Texture2D" uid="uid://dur6idjg3c46" path="res://assets/World Files/Warped City/V1/warped city files/ENVIRONMENT/tileset.png" id="2_binxk"]
-[ext_resource type="PackedScene" path="res://Scenes/Platformer/platform.tscn" id="3_10di8"]
+[ext_resource type="PackedScene" uid="uid://gdv1e5gvq5ci" path="res://Scenes/Platformer/platform.tscn" id="3_10di8"]
+[ext_resource type="PackedScene" uid="uid://brjxkyjyxhjpd" path="res://Scenes/Platformer/computer.tscn" id="4_j06tc"]
+[ext_resource type="PackedScene" uid="uid://ta0nxyr7s8jg" path="res://Scenes/Platformer/coin.tscn" id="5_28ktl"]
+[ext_resource type="Texture2D" uid="uid://b8ided6mgmw4g" path="res://assets/World Files/Background/bg-1.png" id="6_54xmx"]
+[ext_resource type="Texture2D" uid="uid://cwjhs08ijkxx1" path="res://assets/World Files/Background/bg-2.png" id="7_6shom"]
+[ext_resource type="PackedScene" uid="uid://dnvtwfyq20hlc" path="res://Scenes/Platformer/killzone.tscn" id="8_iv5la"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sa44g"]
 texture = ExtResource("2_binxk")
@@ -124,18 +127,143 @@ texture = ExtResource("2_binxk")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_sa44g")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ngrow"]
+distance = -73.0
+
+[sub_resource type="Animation" id="Animation_5v0rs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(632, -7)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(906, -7)]
+}
+
+[sub_resource type="Animation" id="Animation_uikhj"]
+resource_name = "move_lr"
+length = 1.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.46667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(632, -7), Vector2(705, -7)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(906, -7), Vector2(1030, -7)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v2rj0"]
+_data = {
+"RESET": SubResource("Animation_5v0rs"),
+"move_lr": SubResource("Animation_uikhj")
+}
+
 [node name="lvl_1" type="Node2D"]
 
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+visible = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource("6_54xmx")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+texture = ExtResource("7_6shom")
+
 [node name="Player" parent="." instance=ExtResource("1_yemfr")]
+z_index = 1
 position = Vector2(11, -25)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_2isx5")
 format = 2
-layer_0/tile_data = PackedInt32Array(131071, 458752, 11, 65536, 458752, 11, 65537, 458752, 11, 65538, 458752, 11, 65539, 458752, 11, 65540, 458752, 11, 65541, 458752, 11, 65542, 458752, 11, 6, 458752, 11, 7, 458752, 11, 8, 458752, 11, 65544, 458752, 11, 65543, 458752, 11, 65545, 458752, 11, 65546, 458752, 11, 65547, 458752, 11, 65548, 458752, 11, 65549, 458752, 11, 65550, 458752, 11, 14, 458752, 11, 15, 458752, 11, -65521, 458752, 11, -65520, 458752, 11, -131056, 458752, 11, -131055, 458752, 11, -65519, 458752, 11, 17, 458752, 11, 16, 458752, 11, 65552, 458752, 11, 65551, 458752, 11, 65553, 458752, 11, -131053, 458752, 11, -65517, 458752, 11, 19, 458752, 11, 65555, 458752, 11, 65556, 458752, 11, 20, 458752, 11, -65516, 458752, 11, -131052, 458752, 11, -65515, 458752, 11, 21, 458752, 11, 65557, 458752, 11, 65558, 458752, 11, 22, 458752, 11, 65559, 458752, 11, 65560, 458752, 11, 65561, 458752, 11, 65562, 458752, 11, 65563, 458752, 11, 65564, 458752, 11, 65565, 458752, 11, 65566, 458752, 11, 65567, 458752, 11, 65568, 458752, 11, 65569, 458752, 11, 65570, 458752, 11, 65571, 458752, 11, 65572, 458752, 11)
+layer_0/tile_data = PackedInt32Array(131071, 458752, 11, 65536, 458752, 11, 65537, 458752, 11, 65538, 458752, 11, 65539, 458752, 11, 65540, 458752, 11, 65541, 458752, 11, 65542, 458752, 11, 6, 458752, 11, 7, 458752, 11, 8, 458752, 11, 65544, 458752, 11, 65543, 458752, 11, 65545, 458752, 11, 65546, 458752, 11, 65547, 458752, 11, 65548, 458752, 11, 65549, 458752, 11, 65550, 458752, 11, 14, 458752, 11, -65521, 458752, 11, -131056, 458752, 11, -131055, 458752, 11, -131053, 458752, 11, -131052, 458752, 11, -65515, 458752, 11, 65558, 458752, 11, 22, 458752, 11, 65559, 458752, 11, 65560, 458752, 11, 65561, 458752, 11, 65562, 458752, 11, 65563, 458752, 11, 65564, 458752, 11, 65565, 458752, 11, 65566, 458752, 11, 65567, 458752, 11, 65568, 458752, 11, 65569, 458752, 11, 65570, 458752, 11, 65571, 458752, 11, 65572, 458752, 11, 65573, 458752, 11, 65581, 458752, 11, 65582, 458752, 11, 65583, 458752, 11, 65584, 458752, 11, 65587, 458752, 11, 65588, 458752, 11, 65589, 458752, 11, 65590, 458752, 11, 65602, 458752, 11, 65603, 458752, 11, 65604, 458752, 11, 65607, 458752, 11, 65608, 458752, 11, 65609, 458752, 11, 131146, 458752, 11, 131147, 458752, 11, 65612, 458752, 11, 65613, 458752, 11, 78, 458752, 11, -65457, 458752, 11, -130992, 458752, 11, -130991, 458752, 11, 196607, 1376256, 1, 131072, 1376256, 1, 131073, 1376256, 1, 131074, 1376256, 1, 131075, 1376256, 1, 131076, 1376256, 1, 131077, 1376256, 1, 131078, 1376256, 1, 131079, 1376256, 1, 131080, 1376256, 1, 131081, 1376256, 1, 131082, 1376256, 1, 131083, 1376256, 1, 131084, 1376256, 1, 131085, 1376256, 1, 131086, 1376256, 1, 131087, 1376256, 1, 131088, 1376256, 1, 131089, 1376256, 1, 131091, 1376256, 1, 131092, 1376256, 1, 131093, 1376256, 1, 131094, 1376256, 1, 131095, 1376256, 1, 131096, 1376256, 1, 131097, 1376256, 1, 131098, 1376256, 1, 131099, 1376256, 1, 131100, 1376256, 1, 131101, 1376256, 1, 131102, 1376256, 1, 131103, 1376256, 1, 131104, 1376256, 1, 131105, 1376256, 1, 131106, 1376256, 1, 131107, 1376256, 1, 131108, 1376256, 1, 131109, 1376256, 1, 65553, 458752, 3, 65555, 65536, 3, -65517, 65536, 1, -65519, 458752, 1, 17, 458752, 2, 16, 65536, 2, -65520, 65536, 2, 65552, 65536, 2, 19, 65536, 2, -65516, 458752, 2, 20, 458752, 2, 65556, 458752, 2, 21, 65536, 2, 65557, 65536, 2, 15, 458752, 2, 65551, 458752, 2)
 
-[node name="Platform" parent="." instance=ExtResource("3_10di8")]
-position = Vector2(450, -24)
+[node name="AnimatableBody2D" parent="." instance=ExtResource("4_j06tc")]
+position = Vector2(563, -8)
 
-[node name="Platform2" parent="." instance=ExtResource("3_10di8")]
-position = Vector2(496, -24)
+[node name="killzone" parent="." instance=ExtResource("8_iv5la")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+shape = SubResource("WorldBoundaryShape2D_ngrow")
+
+[node name="coins" type="Node" parent="."]
+
+[node name="Area2D" parent="coins" instance=ExtResource("5_28ktl")]
+position = Vector2(450, -38)
+
+[node name="Area2D2" parent="coins" instance=ExtResource("5_28ktl")]
+position = Vector2(497, -38)
+
+[node name="Area2D4" parent="coins" instance=ExtResource("5_28ktl")]
+position = Vector2(906, -25)
+
+[node name="Area2D3" parent="coins" instance=ExtResource("5_28ktl")]
+position = Vector2(693, -25)
+
+[node name="lr_platforms" type="Node" parent="."]
+
+[node name="Platform4" parent="lr_platforms" instance=ExtResource("3_10di8")]
+position = Vector2(906, -7)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="lr_platforms/Platform4"]
+libraries = {
+"": SubResource("AnimationLibrary_v2rj0")
+}
+autoplay = "move_lr"
+
+[node name="Platform5" parent="lr_platforms" instance=ExtResource("3_10di8")]
+position = Vector2(906, -7)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="lr_platforms/Platform5"]
+libraries = {
+"": SubResource("AnimationLibrary_v2rj0")
+}
+autoplay = "move_lr"
+
+[node name="static_platforms" type="Node" parent="."]
+
+[node name="Platform" parent="static_platforms" instance=ExtResource("3_10di8")]
+position = Vector2(450, -21)
+
+[node name="Platform2" parent="static_platforms" instance=ExtResource("3_10di8")]
+position = Vector2(496, -21)

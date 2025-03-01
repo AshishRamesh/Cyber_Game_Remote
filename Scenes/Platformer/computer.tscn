@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://brjxkyjyxhjpd"]
+
+[ext_resource type="Texture2D" uid="uid://dfnj7avj05l28" path="res://assets/Computer/Attack.png" id="1_1nxqq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mw8de"]
+atlas = ExtResource("1_1nxqq")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m71u7"]
+atlas = ExtResource("1_1nxqq")
+region = Rect2(80, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cmgtc"]
+atlas = ExtResource("1_1nxqq")
+region = Rect2(160, 0, 80, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mr8r6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mw8de")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m71u7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cmgtc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mr8r6")
+autoplay = "default"
+frame_progress = 0.913216
