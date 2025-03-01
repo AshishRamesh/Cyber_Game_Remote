@@ -28,6 +28,10 @@ border_width_left = 7
 border_width_top = 9
 border_width_right = 9
 border_width_bottom = 7
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 shadow_size = 5
 shadow_offset = Vector2(2, 2)
 
@@ -38,6 +42,10 @@ border_width_left = 7
 border_width_top = 9
 border_width_right = 9
 border_width_bottom = 7
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 shadow_size = 5
 shadow_offset = Vector2(2, 2)
 
