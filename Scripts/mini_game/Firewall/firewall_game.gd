@@ -148,13 +148,13 @@ func check_win_condition():
 func game_won(message):
 	print(message + " Final Score: " + str(score))
 	Global.final_score = score  
-	get_tree().change_scene_to_file("res://Scenes/Mini_Games/FirewallDefense/firewall_end_scene.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Menus/you_won.tscn")
 	game_over_state = true  
 
 func game_over(message):
 	print(message + " Final Score: " + str(score))
 	Global.final_score = score  
-	get_tree().change_scene_to_file("res://Scenes/Mini_Games/FirewallDefense/firewall_end_scene.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Menus/game_over.tscn")
 	game_over_state = true  
 
 	if has_node("GameTimer"):

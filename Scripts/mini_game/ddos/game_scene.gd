@@ -63,7 +63,7 @@ func spawn_websites():
 
 		# When the animation finishes, check if it's a malicious website and increase CPU load
 		await tween.finished
-		if website_instance:  # Check if the node still exists
+		if website_instance and website_instance.is_inside_tree():
 			if website_instance.is_malicious:
 				increase_cpu_load()  # Penalize the player if a malicious site is not clicked
 			website_instance.queue_free()  # Remove the website
@@ -123,17 +123,14 @@ func _on_game_timer_timeout():
 func game_over(message):
 	print(message + " Final Score: " + str(score))
 	Global.final_score = score  # Store the final score in Global script
-	# Load End Scene and Pass Score
-	get_tree().change_scene_to_file("res://Scenes/Mini_Games/DDos/end_scene.tscn")
-
+	
 	game_over_state = true  # Stop game logic
 
+	# Stop all timers
 	if has_node("GameTimer"):
 		$GameTimer.stop()
-
 	if has_node("SpawnTimer"):
 		$SpawnTimer.stop()
-
 	if has_node("CountdownTimer"):
 		$CountdownTimer.stop()
 
@@ -141,8 +138,17 @@ func game_over(message):
 	for child in get_children():
 		if child.name.begins_with("Website"):  # Assuming websites are named dynamically
 			child.queue_free()
-			
+
+	# Ensure the scene tree exists before changing the scene
+	if get_tree():
+		await get_tree().process_frame  # Ensure the scene tree is ready
+		if load_value >= 100:  
+			get_tree().change_scene_to_file("res://Scenes/Menus/game_over.tscn")  # Player loses
+		else:  
+			get_tree().change_scene_to_file("res://Scenes/Menus/you_won.tscn")  # Player wins
+
 func screen_shake():
-	var tween = create_tween()
-	tween.tween_property($MainCamera, "offset", Vector2(randf_range(-5, 5), randf_range(-5, 5)), 0.05)
-	tween.tween_property($MainCamera, "offset", Vector2(0, 0), 0.05)			
+	if has_node("MainCamera"):
+		var tween = create_tween()
+		tween.tween_property($MainCamera, "offset", Vector2(randf_range(-5, 5), randf_range(-5, 5)), 0.05)
+		tween.tween_property($MainCamera, "offset", Vector2(0, 0), 0.05)
