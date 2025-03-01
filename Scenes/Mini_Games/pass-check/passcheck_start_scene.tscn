@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://cu6trk2idu1jo"]
+
+[ext_resource type="FontFile" uid="uid://ma1j7da4mhsj" path="res://assets/Fonts/pixel_lcd_7.ttf" id="1_tvv3w"]
+
+[node name="passcheck-start_scene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -579.0
+offset_top = -310.0
+offset_right = -579.0
+offset_bottom = -310.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 964.0
+offset_top = 572.0
+offset_right = 1309.0
+offset_bottom = 647.0
+theme_override_fonts/font = ExtResource("1_tvv3w")
