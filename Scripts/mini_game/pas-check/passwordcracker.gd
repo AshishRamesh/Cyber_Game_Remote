@@ -29,9 +29,6 @@ func _ready():
 
 	$PasswordInput.text_submitted.connect(_on_PasswordInput_text_submitted)
 
-	timer.wait_time = time_left  # Set timer duration
-	timer.start()  # Start the countdown
-	timer.timeout.connect(_on_timer_timeout)  # Connect timeout signal
 
 func generate_random_hashes():
 	letter_hash.clear()
@@ -80,9 +77,13 @@ func _on_PasswordInput_text_submitted(user_input: String):
 
 	if user_hash == hashed_password:
 		$FeedbackLabel.text = "✅ Correct! You cracked the code!"
-		timer.stop()  # Stop timer if correct
-		await get_tree().create_timer(1).timeout
-		get_tree().reload_current_scene()
+		Global.mini_comp = true
+		get_tree().change_scene_to_file("res://Scenes/Platformer/lvl_1.tscn") 
+		
+		
+		#await get_tree().create_timer(1).timeout  
+
+
 	else:
 		if attempts > 0:
 			var wrong_index = 3 - attempts  

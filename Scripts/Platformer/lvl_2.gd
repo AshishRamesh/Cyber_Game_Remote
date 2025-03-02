@@ -3,3 +3,5 @@ extends Node2D
 func _ready():
 	if Global.player_position != Vector2(0,0):
 		player.position = Global.player_position 
+	else:
+		Global.mini_comp = false

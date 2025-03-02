@@ -47,6 +47,7 @@ animations = [{
 size = Vector2(18, 18)
 
 [node name="enemy" type="Node2D"]
+z_index = 2
 script = ExtResource("1_f5has")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

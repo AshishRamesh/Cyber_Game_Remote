@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdbr3nv5xt5hi"]
+
+[ext_resource type="Script" path="res://Scripts/Platformer/door.gd" id="1_q3yit"]
+[ext_resource type="Texture2D" uid="uid://bvjpnjxtuphqr" path="res://assets/World Files/cyberpunk-detective-props/PNG/elevator.png" id="2_witgf"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_km6kj"]
+radius = 28.0
+height = 84.0
+
+[node name="door" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_q3yit")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_witgf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_km6kj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

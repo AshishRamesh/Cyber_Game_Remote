@@ -58,7 +58,7 @@ func check_password(password):
 			conditions_met["capital"] = true
 			feedback_label.text = "✅ Strong Password! You Win!"
 			game_status = "win"
-			get_tree().change_scene_to_file("res://Scenes/WinScreen.tscn")
+			get_tree().change_scene_to_file("res://Scenes/Menus/you_won.tscn")
 		else:
 			feedback_label.text = "❌ Password must contain at least one capital letter!"
 			return

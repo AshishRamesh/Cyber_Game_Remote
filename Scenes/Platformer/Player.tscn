@@ -146,3 +146,7 @@ zoom = Vector2(4, 4)
 limit_bottom = 80
 limit_smoothed = true
 position_smoothing_enabled = true
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(-11, 12)
+target_position = Vector2(0, 19)
