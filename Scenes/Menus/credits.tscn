@@ -1,19 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://dr7ncg4g0ya7o"]
+[gd_scene load_steps=14 format=3 uid="uid://dr7ncg4g0ya7o"]
 
 [ext_resource type="Texture2D" uid="uid://cpq3qdfhjjbes" path="res://assets/World Files/Warped City/V1/warped city files/ENVIRONMENT/background/skyline-a.png" id="1_7xid6"]
+[ext_resource type="Script" path="res://Scenes/Menus/credits.gd" id="1_18ax7"]
 [ext_resource type="FontFile" uid="uid://dmujmael4nlo1" path="res://assets/Fonts/Vermin Vibes 1989.ttf" id="2_0ch16"]
 [ext_resource type="FontFile" uid="uid://db67b11v1r2hx" path="res://assets/Fonts/Minecrafter.Alt.ttf" id="3_hkqvq"]
+[ext_resource type="Texture2D" uid="uid://dvvxhh38hgdmf" path="res://assets/Props/keyboard_x_1.svg" id="5_gdskp"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mvwji"]
 texture = ExtResource("1_7xid6")
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wua7f"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gp1hp"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i1vjq"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qgg6w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yxuqf"]
 bg_color = Color(0, 0, 0, 0.298039)
@@ -27,6 +21,25 @@ corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5rvwf"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ndhl5"]
+load_path = "res://.godot/imported/keyboard_x_1.svg-e68519a6f790877dc5e661219b80c832.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uuw4m"]
+texture = SubResource("CompressedTexture2D_ndhl5")
+modulate_color = Color(0.254608, 0.254608, 0.254608, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xfodi"]
+load_path = "res://.godot/imported/keyboard_x_1.svg-e68519a6f790877dc5e661219b80c832.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6goxt"]
+texture = SubResource("CompressedTexture2D_xfodi")
+modulate_color = Color(0.421477, 0.421477, 0.421477, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uaax8"]
+texture = ExtResource("5_gdskp")
+
 [node name="Credits" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -34,6 +47,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_18ax7")
 
 [node name="bg" type="Panel" parent="."]
 layout_mode = 1
@@ -43,27 +57,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_mvwji")
-
-[node name="press_to_continue" type="Button" parent="bg"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -278.0
-offset_top = 557.0
-offset_right = 278.0
-offset_bottom = 656.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_0ch16")
-theme_override_font_sizes/font_size = 40
-theme_override_styles/focus = SubResource("StyleBoxEmpty_wua7f")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_gp1hp")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_i1vjq")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_qgg6w")
-text = "PRESS ENTER TO CONTINUE"
 
 [node name="yellow_boader" type="Panel" parent="bg"]
 layout_mode = 1
@@ -95,16 +88,17 @@ offset_bottom = 259.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_hkqvq")
-theme_override_font_sizes/font_size = 39
-text = "Your goal is to create a \"strong password\" before time runs out! 
+theme_override_font_sizes/font_size = 50
+text = "DEVELOPERS
+- ASHISH RAMESH
+- SAHIL DESAI
+- JIYA PANDEY
+- MD NABI 
 
-How to Play: 
-⿡- Enter a password in the input box.  
-⿢- Follow the hints to improve your password.  
-⿣- Each step brings you closer to making it stronger! 
-⿤- You have \"60 seconds\" to get it right—think fast! 
-⿥- If you succeed, you win! Otherwise, better luck next time! ❌ 
-"
+Resources
+- probes : itch.io
+- sounds : pixabay
+- Game engin : godot"
 
 [node name="heading" type="Label" parent="bg"]
 layout_mode = 1
@@ -120,3 +114,23 @@ theme_override_fonts/font = ExtResource("2_0ch16")
 theme_override_font_sizes/font_size = 110
 text = "CREADITS"
 horizontal_alignment = 1
+
+[node name="cross" type="Button" parent="bg"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 833.0
+offset_top = -449.0
+offset_right = 932.0
+offset_bottom = -371.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5rvwf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_uuw4m")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6goxt")
+theme_override_styles/normal = SubResource("StyleBoxTexture_uaax8")
+
+[connection signal="pressed" from="bg/cross" to="." method="_on_cross_pressed"]

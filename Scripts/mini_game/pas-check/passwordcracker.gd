@@ -9,6 +9,7 @@ var time_left = 60  # Set timer for 60 seconds
 @onready var timer: Timer = $Timer  # Ensure there is a Timer node in the scene
 
 # Load ❌ icon for wrong attempts
+var wrong_icon = preload("res://icon.svg")  # Update the correct path
 var wrong_icon = preload("res://assets/Props/keyboard_x_1.svg")  # Update path
 
 var attempt_boxes = []
@@ -55,6 +56,7 @@ func display_hashes():
 	$HashLabel.text = hash_text  
 
 func generate_meaningful_password():
+	var words = ["CODE", "PLAY", "HERO", "DATA", "LOVE", "SAFE", "WORLD", "HELLO", "GODOT"]
 	var words = ["PASSWORD", "ADMIN", "LETMEIN", "DATA", "QWERTY", "SAFE", "WORLD", "HELLO", "GODOT", "TEAMJASN"]
 	correct_password = words[randi() % words.size()]
 	hashed_password = ""
@@ -95,6 +97,8 @@ func _on_PasswordInput_text_submitted(user_input: String):
 		if attempts > 0:
 			$FeedbackLabel.text = "❌ Wrong! Attempts left: " + str(attempts)
 		else:
+			$FeedbackLabel.text = "❌ You lost! The word was: " + correct_password
+			get_tree().change_scene_to_file("res://Scenes/Menus/game_over.tscn") 
 			game_over()
 
 func _on_timer_timeout():
