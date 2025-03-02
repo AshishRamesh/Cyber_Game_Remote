@@ -4,6 +4,7 @@ extends CharacterBody2D
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -290.0
+@onready var jump_sound: AudioStreamPlayer2D = $"../jump_sound"
 
 var platVel = Vector2(0,0)
 
@@ -30,6 +31,8 @@ func _physics_process(delta: float) -> void:
 		animated_sprite.flip_h = true 
 	
 	if is_on_floor():
+		Global.player_position.x = player.position.x
+		Global.player_position.y = player.position.y
 		if direction == 0:
 			animated_sprite.play("default")
 		else:
@@ -41,7 +44,5 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	elif is_on_floor():
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-	Global.player_position.x = player.position.x
-	Global.player_position.y = player.position.y
 	move_and_slide()
 	platVel = get_platform_velocity()

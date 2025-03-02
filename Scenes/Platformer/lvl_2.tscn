@@ -1,5 +1,6 @@
-[gd_scene load_steps=23 format=3 uid="uid://ck7axvdi5xesr"]
+[gd_scene load_steps=28 format=3 uid="uid://ck7axvdi5xesr"]
 
+[ext_resource type="Script" path="res://Scripts/Platformer/lvl_2.gd" id="1_31rby"]
 [ext_resource type="PackedScene" uid="uid://j65lk7vt3oms" path="res://Scenes/Platformer/Player.tscn" id="1_adqk8"]
 [ext_resource type="Texture2D" uid="uid://dur6idjg3c46" path="res://assets/World Files/Warped City/V1/warped city files/ENVIRONMENT/tileset.png" id="2_hleo2"]
 [ext_resource type="PackedScene" uid="uid://dnvtwfyq20hlc" path="res://Scenes/Platformer/killzone.tscn" id="4_i4b0c"]
@@ -10,6 +11,18 @@
 [ext_resource type="PackedScene" uid="uid://bn0gqbgpd1gk5" path="res://Scenes/Platformer/platform_up_down.tscn" id="8_o4qj8"]
 [ext_resource type="Texture2D" uid="uid://cpm8h248t8qpg" path="res://assets/World Files/city_skyline/front.png" id="9_dcbp2"]
 [ext_resource type="PackedScene" uid="uid://0rurickf46sk" path="res://Scenes/Platformer/enemy.tscn" id="10_pbw58"]
+[gd_scene load_steps=19 format=3 uid="uid://sld6yo2bavte"]
+
+[ext_resource type="PackedScene" uid="uid://j65lk7vt3oms" path="res://Scenes/Platformer/Player.tscn" id="1_adqk8"]
+[ext_resource type="Texture2D" uid="uid://dur6idjg3c46" path="res://assets/World Files/Warped City/V1/warped city files/ENVIRONMENT/tileset.png" id="2_hleo2"]
+[ext_resource type="PackedScene" uid="uid://brjxkyjyxhjpd" path="res://Scenes/Platformer/computer.tscn" id="3_c33rd"]
+[ext_resource type="PackedScene" path="res://Scenes/Platformer/killzone.tscn" id="4_i4b0c"]
+[ext_resource type="PackedScene" uid="uid://bivqp7d28cn3c" path="res://Scenes/Platformer/coin.tscn" id="5_vugeq"]
+[ext_resource type="PackedScene" uid="uid://cicqg022ckx8k" path="res://Scenes/Platformer/platform.tscn" id="6_505rf"]
+[ext_resource type="Texture2D" uid="uid://bs7dxo2g10bt2" path="res://assets/World Files/cyberpunk-corridor-files/PNG/back.png" id="7_7rn4n"]
+[ext_resource type="Texture2D" uid="uid://cwjhs08ijkxx1" path="res://assets/World Files/Background/bg-2.png" id="8_d2bpi"]
+[ext_resource type="Texture2D" uid="uid://2yycbbockbfo" path="res://assets/World Files/Background/bg-3.png" id="9_8hw4d"]
+[ext_resource type="PackedScene" uid="uid://dmge06cu7tvwn" path="res://Scenes/Platformer/computer_pwd_chk.tscn" id="11_2s0xt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sa44g"]
 texture = ExtResource("2_hleo2")
@@ -244,7 +257,45 @@ _data = {
 "move": SubResource("Animation_47lru")
 }
 
-[node name="lvl_1" type="Node2D"]
+[sub_resource type="Animation" id="Animation_opsnn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(690, -121)]
+}
+
+[sub_resource type="Animation" id="Animation_jxqf4"]
+resource_name = "move"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(690, -121), Vector2(690, -52)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vs0wh"]
+_data = {
+"RESET": SubResource("Animation_opsnn"),
+"move": SubResource("Animation_jxqf4")
+}
+
+[node name="lvl_2" type="Node2D"]
+script = ExtResource("1_31rby")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -315,7 +366,7 @@ position = Vector2(11, -18)
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_2isx5")
 format = 2
-layer_0/tile_data = PackedInt32Array(56, 458752, 11, 57, 458752, 11, -130984, 458752, 11, 262143, 1376256, 1, 196608, 1376256, 1, 196609, 1376256, 1, 196610, 1376256, 1, 196611, 1376256, 1, 196612, 1376256, 1, 196613, 1376256, 1, 196607, 458752, 11, 131072, 458752, 11, 131073, 458752, 11, 131074, 458752, 11, 131075, 458752, 11, 131076, 458752, 11, 131077, 458752, 11, -327674, 393216, 11, -327673, 458752, 11, -327672, 458752, 11, -327671, 458752, 11, -327670, 458752, 11, -327669, 458752, 11, -327668, 458752, 11, -327667, 458752, 11, -327666, 589824, 11, -524260, 458752, 11, -524259, 458752, 11, -524258, 458752, 11, -524257, 458752, 11, -524256, 458752, 11, -524255, 458752, 11, -524254, 458752, 11, -524253, 458752, 11, -524252, 458752, 11, -524251, 458752, 11, -524250, 458752, 11, -524249, 458752, 11, -589786, 458752, 11, -589794, 458752, 11, -524248, 458752, 11)
+layer_0/tile_data = PackedInt32Array(262143, 1376256, 1, 196608, 1376256, 1, 196609, 1376256, 1, 196610, 1376256, 1, 196611, 1376256, 1, 196612, 1376256, 1, 196613, 1376256, 1, 196607, 458752, 11, 131072, 458752, 11, 131073, 458752, 11, 131074, 458752, 11, 131075, 458752, 11, 131076, 458752, 11, 131077, 458752, 11, -327674, 393216, 11, -327673, 458752, 11, -327672, 458752, 11, -327671, 458752, 11, -327670, 458752, 11, -327669, 458752, 11, -327668, 458752, 11, -327667, 458752, 11, -327666, 589824, 11, -524260, 458752, 11, -524259, 458752, 11, -524258, 458752, 11, -524257, 458752, 11, -524256, 458752, 11, -524255, 458752, 11, -524254, 458752, 11, -524253, 458752, 11, -524252, 458752, 11, -524251, 458752, 11, -524250, 458752, 11, -524249, 458752, 11, -589786, 458752, 11, -589794, 458752, 11, -524248, 458752, 11, -458706, 458752, 11, -458705, 458752, 11, -196559, 458752, 11, -196558, 458752, 11, -65479, 458752, 11, -65478, 458752, 11, -65477, 458752, 11, -65476, 458752, 11, -65475, 458752, 11, -65474, 458752, 11, -327627, 458752, 11, -327626, 458752, 11, 65601, 458752, 11, 131137, 458752, 11, 131138, 458752, 11, 131139, 458752, 11, 131140, 458752, 11, 131141, 458752, 11, 131142, 458752, 11, 131143, 458752, 11, 131144, 458752, 11, 131145, 458752, 11, 131146, 458752, 11, 131147, 458752, 11, 131148, 458752, 11, 131149, 458752, 11, 65613, 458752, 11, 79, 458752, 11, -65456, 458752, 11, -130991, 458752, 11, -196526, 458752, 11, -196525, 458752, 11, -262060, 458752, 11, -327595, 458752, 11, 80, 458752, 11, -65455, 458752, 11, -130990, 458752, 11, -196524, 458752, 11, -262059, 458752, 11, -327594, 458752, 11)
 
 [node name="killzone" parent="." instance=ExtResource("4_i4b0c")]
 
@@ -363,5 +414,20 @@ libraries = {
 }
 autoplay = "move"
 
+[node name="Platform3" parent="up_down_platforms" instance=ExtResource("8_o4qj8")]
+position = Vector2(690, -121)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="up_down_platforms/Platform3"]
+libraries = {
+"": SubResource("AnimationLibrary_vs0wh")
+}
+autoplay = "move"
+
 [node name="enemy" parent="." instance=ExtResource("10_pbw58")]
 position = Vector2(519, -138)
+
+[node name="computer_pwd_chk" parent="." instance=ExtResource("11_2s0xt")]
+position = Vector2(959, -40)
+
+[node name="Platform" parent="." instance=ExtResource("8_o4qj8")]
+position = Vector2(1429, -72)
