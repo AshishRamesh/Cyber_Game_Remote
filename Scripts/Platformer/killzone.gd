@@ -1,4 +1,5 @@
 extends Area2D
+@onready var player: CharacterBody2D = $"../Player"
 
 @onready var timer: Timer = $Timer
 func _on_body_entered(body: Node2D) -> void:
@@ -8,4 +9,5 @@ func _on_body_entered(body: Node2D) -> void:
 
 func _on_timer_timeout() -> void:
 	get_tree().reload_current_scene()
-	Global.player_position = Vector2(0,0)
+	#if Global.player_position != null:
+		#player.position = Global.player_position 

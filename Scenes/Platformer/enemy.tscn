@@ -60,7 +60,7 @@ autoplay = "default"
 shape = SubResource("RectangleShape2D_573jd")
 
 [node name="RayCast_right" type="RayCast2D" parent="."]
-target_position = Vector2(28, 0)
+target_position = Vector2(21, 0)
 
 [node name="RayCast_left" type="RayCast2D" parent="."]
-target_position = Vector2(-29, 0)
+target_position = Vector2(-21, 0)

@@ -95,7 +95,6 @@ collision_mask = 2
 script = ExtResource("1_jjscn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-6, -5)
 sprite_frames = SubResource("SpriteFrames_pqur6")
 animation = &"completed"
 autoplay = "default"
