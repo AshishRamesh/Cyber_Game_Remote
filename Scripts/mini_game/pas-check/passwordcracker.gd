@@ -81,11 +81,8 @@ func _on_PasswordInput_text_submitted(user_input: String):
 
 	if user_hash == hashed_password:
 		$FeedbackLabel.text = "✅ Correct! You cracked the code!"
-		get_tree().change_scene_to_file("res://Scenes/Platformer/lvl_1.tscn") 
-		
-		
+		get_tree().change_scene_to_file("res://Scenes/Menus/you_won.tscn") 
 		#await get_tree().create_timer(1).timeout  
-
 		 
 	else:
 		if attempts > 0:
@@ -99,4 +96,4 @@ func _on_PasswordInput_text_submitted(user_input: String):
 			$FeedbackLabel.text = "❌ Wrong! Attempts left: " + str(attempts)
 		else:
 			$FeedbackLabel.text = "❌ You lost! The word was: " + correct_password
-			get_tree().change_scene_to_file("res://Scenes/Menus/game_over_pswd_chk.tscn") 
+			get_tree().change_scene_to_file("res://Scenes/Menus/game_over.tscn") 

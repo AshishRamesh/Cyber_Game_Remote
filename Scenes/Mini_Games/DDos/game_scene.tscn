@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://d1yh1io07goqj"]
+[gd_scene load_steps=11 format=3 uid="uid://d1yh1io07goqj"]
 
 [ext_resource type="Script" path="res://Scripts/mini_game/ddos/game_scene.gd" id="1_d7vuc"]
 [ext_resource type="FontFile" uid="uid://db67b11v1r2hx" path="res://assets/Fonts/Minecrafter.Alt.ttf" id="2_4atyg"]
 [ext_resource type="FontFile" uid="uid://ma1j7da4mhsj" path="res://assets/Fonts/pixel_lcd_7.ttf" id="3_wj87v"]
 [ext_resource type="Texture2D" uid="uid://d2iw2r05sfuyh" path="res://assets/World Files/Background/Rectangle 2.png" id="4_8q4k6"]
+[ext_resource type="Texture2D" uid="uid://b8s8xtwx1f50d" path="res://assets/World Files/cyberpunk-detective-props/PNG/server-gabinetes.png" id="5_e377s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2iirx"]
 bg_color = Color(0.0986259, 0.140991, 0.245324, 1)
@@ -46,12 +47,10 @@ corner_radius_bottom_right = 5
 script = ExtResource("1_d7vuc")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -41.0
-offset_top = -14.0
-offset_right = 2859.0
-offset_bottom = 1588.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = -84.0
+offset_top = -3.0
+offset_right = 2816.0
+offset_bottom = 1599.0
 scale = Vector2(0.5, 0.5)
 size_flags_horizontal = 2
 size_flags_vertical = 2
@@ -78,10 +77,12 @@ horizontal_alignment = 1
 
 [node name="LoadBar" type="ProgressBar" parent="."]
 z_index = 2
-offset_left = 1095.0
-offset_top = 25.0
-offset_right = 1232.0
-offset_bottom = 52.0
+offset_left = 1157.0
+offset_top = 27.0
+offset_right = 1294.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 19
 theme_override_styles/background = SubResource("StyleBoxFlat_pp02m")
 theme_override_styles/fill = SubResource("StyleBoxFlat_ndfei")
 step = 1.0
@@ -106,11 +107,31 @@ autostart = true
 
 [node name="CPULoadLabel" type="Label" parent="."]
 z_index = 2
-offset_left = 955.0
-offset_top = 24.0
-offset_right = 1071.0
-offset_bottom = 52.0
+offset_left = 915.0
+offset_top = 28.0
+offset_right = 1128.0
+offset_bottom = 56.0
 theme_override_fonts/font = ExtResource("2_4atyg")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_gbm11")
-text = "Health:0%"
+text = "Server Damage:0%"
+
+[node name="Server-gabinetes" type="Sprite2D" parent="."]
+position = Vector2(213, 707)
+scale = Vector2(3.49231, 2.13636)
+texture = ExtResource("5_e377s")
+
+[node name="Server-gabinetes2" type="Sprite2D" parent="."]
+position = Vector2(497, 707)
+scale = Vector2(3.49231, 2.13636)
+texture = ExtResource("5_e377s")
+
+[node name="Server-gabinetes3" type="Sprite2D" parent="."]
+position = Vector2(786, 707)
+scale = Vector2(3.49231, 2.13636)
+texture = ExtResource("5_e377s")
+
+[node name="Server-gabinetes4" type="Sprite2D" parent="."]
+position = Vector2(1091, 707)
+scale = Vector2(3.49231, 2.13636)
+texture = ExtResource("5_e377s")

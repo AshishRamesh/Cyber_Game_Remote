@@ -69,7 +69,10 @@ func spawn_packets():
 			packet_instance.is_malicious = false
 
 		# Set random position
-		packet_instance.position = Vector2(randi() % 800, -50)  
+		packet_instance.position = Vector2(randi() % 800, -50)
+
+  # Adjust x-position
+
 
 		# Connect button press event
 		packet_instance.connect("pressed", Callable(self, "_on_packet_clicked").bind(packet_instance))
@@ -131,7 +134,7 @@ func increase_firewall_load():
 
 func update_firewall_display():
 	if has_node("CPULoadLabel"):
-		$CPULoadLabel.text = "Health: " + str(firewall_load) + "%"  
+		$CPULoadLabel.text = "Server Damage: " + str(firewall_load) + "%"  
 
 	if has_node("LoadBar"):
 		$LoadBar.value = firewall_load  
