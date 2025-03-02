@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://d1yh1io07goqj"]
+[gd_scene load_steps=11 format=3 uid="uid://d1yh1io07goqj"]
 
 [ext_resource type="Script" path="res://Scripts/mini_game/ddos/game_scene.gd" id="1_d7vuc"]
 [ext_resource type="FontFile" uid="uid://db67b11v1r2hx" path="res://assets/Fonts/Minecrafter.Alt.ttf" id="2_4atyg"]
 [ext_resource type="FontFile" uid="uid://ma1j7da4mhsj" path="res://assets/Fonts/pixel_lcd_7.ttf" id="3_wj87v"]
 [ext_resource type="Texture2D" uid="uid://d2iw2r05sfuyh" path="res://assets/World Files/Background/Rectangle 2.png" id="4_8q4k6"]
+[ext_resource type="Texture2D" uid="uid://b8s8xtwx1f50d" path="res://assets/World Files/cyberpunk-detective-props/PNG/server-gabinetes.png" id="5_l5i5y"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2iirx"]
 bg_color = Color(0.0986259, 0.140991, 0.245324, 1)
@@ -46,12 +47,10 @@ corner_radius_bottom_right = 5
 script = ExtResource("1_d7vuc")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -41.0
-offset_top = -14.0
-offset_right = 2859.0
-offset_bottom = 1588.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = -6.0
+offset_top = -4.0
+offset_right = 3642.0
+offset_bottom = 1822.0
 scale = Vector2(0.5, 0.5)
 size_flags_horizontal = 2
 size_flags_vertical = 2
@@ -114,3 +113,33 @@ theme_override_fonts/font = ExtResource("2_4atyg")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_gbm11")
 text = "Health:0%"
+
+[node name="Server-gabinetes" type="Sprite2D" parent="."]
+position = Vector2(143.25, 721.125)
+scale = Vector2(2.57692, 1.92273)
+texture = ExtResource("5_l5i5y")
+
+[node name="Server-gabinetes2" type="Sprite2D" parent="."]
+position = Vector2(381.25, 720.125)
+scale = Vector2(2.51538, 1.88636)
+texture = ExtResource("5_l5i5y")
+
+[node name="Server-gabinetes3" type="Sprite2D" parent="."]
+position = Vector2(620.25, 720.625)
+scale = Vector2(2.45385, 1.90455)
+texture = ExtResource("5_l5i5y")
+
+[node name="Server-gabinetes4" type="Sprite2D" parent="."]
+position = Vector2(880.25, 720.625)
+scale = Vector2(2.48462, 1.90455)
+texture = ExtResource("5_l5i5y")
+
+[node name="Server-gabinetes5" type="Sprite2D" parent="."]
+position = Vector2(1082, 713)
+scale = Vector2(2.48462, 1.90455)
+texture = ExtResource("5_l5i5y")
+
+[node name="Server-gabinetes6" type="Sprite2D" parent="."]
+position = Vector2(1276, 709)
+scale = Vector2(2.48462, 1.90455)
+texture = ExtResource("5_l5i5y")
