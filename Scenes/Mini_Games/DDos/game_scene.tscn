@@ -4,7 +4,6 @@
 [ext_resource type="FontFile" uid="uid://db67b11v1r2hx" path="res://assets/Fonts/Minecrafter.Alt.ttf" id="2_4atyg"]
 [ext_resource type="FontFile" uid="uid://ma1j7da4mhsj" path="res://assets/Fonts/pixel_lcd_7.ttf" id="3_wj87v"]
 [ext_resource type="Texture2D" uid="uid://d2iw2r05sfuyh" path="res://assets/World Files/Background/Rectangle 2.png" id="4_8q4k6"]
-[ext_resource type="Texture2D" uid="uid://b8s8xtwx1f50d" path="res://assets/World Files/cyberpunk-detective-props/PNG/server-gabinetes.png" id="5_e377s"]
 [ext_resource type="Texture2D" uid="uid://b8s8xtwx1f50d" path="res://assets/World Files/cyberpunk-detective-props/PNG/server-gabinetes.png" id="5_l5i5y"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2iirx"]
@@ -48,19 +47,12 @@ corner_radius_bottom_right = 5
 script = ExtResource("1_d7vuc")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -84.0
-offset_top = -3.0
-offset_right = 2816.0
-offset_bottom = 1599.0
-offset_left = -6.0
-offset_top = -4.0
-offset_right = 3642.0
-offset_bottom = 1822.0
+offset_right = 4044.0
+offset_bottom = 2220.0
 scale = Vector2(0.5, 0.5)
 size_flags_horizontal = 2
 size_flags_vertical = 2
 texture = ExtResource("4_8q4k6")
-stretch_mode = 6
 metadata/_edit_group_ = true
 
 [node name="GameTimer" type="Timer" parent="."]
@@ -121,53 +113,27 @@ theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_gbm11")
 text = "Server Damage:0%"
 
-[node name="Server-gabinetes" type="Sprite2D" parent="."]
-position = Vector2(213, 707)
-scale = Vector2(3.49231, 2.13636)
-texture = ExtResource("5_e377s")
-
-[node name="Server-gabinetes2" type="Sprite2D" parent="."]
-position = Vector2(497, 707)
-scale = Vector2(3.49231, 2.13636)
-texture = ExtResource("5_e377s")
-
-[node name="Server-gabinetes3" type="Sprite2D" parent="."]
-position = Vector2(786, 707)
-scale = Vector2(3.49231, 2.13636)
-texture = ExtResource("5_e377s")
-
-[node name="Server-gabinetes4" type="Sprite2D" parent="."]
-position = Vector2(1091, 707)
-scale = Vector2(3.49231, 2.13636)
-texture = ExtResource("5_e377s")
-text = "Health:0%"
-
-[node name="Server-gabinetes" type="Sprite2D" parent="."]
-position = Vector2(143.25, 721.125)
-scale = Vector2(2.57692, 1.92273)
-texture = ExtResource("5_l5i5y")
-
-[node name="Server-gabinetes2" type="Sprite2D" parent="."]
-position = Vector2(381.25, 720.125)
-scale = Vector2(2.51538, 1.88636)
-texture = ExtResource("5_l5i5y")
-
-[node name="Server-gabinetes3" type="Sprite2D" parent="."]
-position = Vector2(620.25, 720.625)
-scale = Vector2(2.45385, 1.90455)
-texture = ExtResource("5_l5i5y")
-
-[node name="Server-gabinetes4" type="Sprite2D" parent="."]
-position = Vector2(880.25, 720.625)
-scale = Vector2(2.48462, 1.90455)
-texture = ExtResource("5_l5i5y")
-
 [node name="Server-gabinetes5" type="Sprite2D" parent="."]
-position = Vector2(1082, 713)
-scale = Vector2(2.48462, 1.90455)
+position = Vector2(181, 802.688)
+scale = Vector2(4.83846, 5.55227)
 texture = ExtResource("5_l5i5y")
 
 [node name="Server-gabinetes6" type="Sprite2D" parent="."]
-position = Vector2(1276, 709)
-scale = Vector2(2.48462, 1.90455)
+position = Vector2(567, 803.188)
+scale = Vector2(4.83846, 5.53409)
+texture = ExtResource("5_l5i5y")
+
+[node name="Server-gabinetes7" type="Sprite2D" parent="."]
+position = Vector2(970, 803.188)
+scale = Vector2(4.83846, 5.53409)
+texture = ExtResource("5_l5i5y")
+
+[node name="Server-gabinetes8" type="Sprite2D" parent="."]
+position = Vector2(1362, 803.188)
+scale = Vector2(4.83846, 5.53409)
+texture = ExtResource("5_l5i5y")
+
+[node name="Server-gabinetes9" type="Sprite2D" parent="."]
+position = Vector2(1775, 803.188)
+scale = Vector2(4.83846, 5.53409)
 texture = ExtResource("5_l5i5y")

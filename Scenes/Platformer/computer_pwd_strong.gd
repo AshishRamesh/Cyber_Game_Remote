@@ -12,4 +12,4 @@ func _process(delta: float) -> void:
 	if entered == true:
 		if Input.is_action_just_pressed("ui_down"):
 			print("Changing Scene")
-			get_tree().change_scene_to_file("res://Scenes/Menus/password_checker.tscn")
+			get_tree().change_scene_to_file("res://Scenes/Menus/strong_password.tscn")

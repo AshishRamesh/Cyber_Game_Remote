@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://3vromwxv3yhk"]
+[gd_scene format=3 uid="uid://eqpjaheerjdo"]
 
 [node name="ExplosionParticles" type="GPUParticles2D"]
 amount = 50

@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://ck7axvdi5xesr"]
+[gd_scene load_steps=42 format=3 uid="uid://ck7axvdi5xesr"]
 
 [ext_resource type="Script" path="res://Scripts/Platformer/lvl_2.gd" id="1_31rby"]
 [ext_resource type="PackedScene" uid="uid://j65lk7vt3oms" path="res://Scenes/Platformer/Player.tscn" id="1_adqk8"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cpm8h248t8qpg" path="res://assets/World Files/city_skyline/front.png" id="9_dcbp2"]
 [ext_resource type="PackedScene" uid="uid://0rurickf46sk" path="res://Scenes/Platformer/enemy.tscn" id="10_pbw58"]
 [ext_resource type="PackedScene" uid="uid://c8g4nt0cu55e7" path="res://Scenes/Platformer/computer_pwd_strong.tscn" id="12_bhm7a"]
+[ext_resource type="Script" path="res://Scenes/Platformer/computer_pwd_strong.gd" id="13_4gkid"]
 [ext_resource type="Script" path="res://Scenes/Platformer/computer_ddos.gd" id="13_knmct"]
 [ext_resource type="PackedScene" uid="uid://iiwuyrd6vnmx" path="res://Scenes/Platformer/computer_firewall.tscn" id="13_rbkl7"]
 [ext_resource type="Script" path="res://Scenes/Platformer/computer_firewall.gd" id="14_4auv0"]
@@ -287,6 +288,21 @@ _data = {
 "move": SubResource("Animation_jxqf4")
 }
 
+[sub_resource type="Animation" id="Animation_2a0r7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1429, -72)]
+}
+
 [sub_resource type="Animation" id="Animation_y7w1q"]
 resource_name = "mov"
 length = 1.5
@@ -304,7 +320,13 @@ tracks/0/keys = {
 "values": [Vector2(1429, -72), Vector2(1429, 8)]
 }
 
-[sub_resource type="Animation" id="Animation_2a0r7"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5aft3"]
+_data = {
+"RESET": SubResource("Animation_2a0r7"),
+"mov": SubResource("Animation_y7w1q")
+}
+
+[sub_resource type="Animation" id="Animation_x35xr"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -316,13 +338,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1429, -72)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_5aft3"]
-_data = {
-"RESET": SubResource("Animation_2a0r7"),
-"mov": SubResource("Animation_y7w1q")
+"values": [Vector2(1812, 25)]
 }
 
 [sub_resource type="Animation" id="Animation_ppkds"]
@@ -342,7 +358,13 @@ tracks/0/keys = {
 "values": [Vector2(1812, 25), Vector2(1812, -73)]
 }
 
-[sub_resource type="Animation" id="Animation_x35xr"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_imrca"]
+_data = {
+"RESET": SubResource("Animation_x35xr"),
+"mov": SubResource("Animation_ppkds")
+}
+
+[sub_resource type="Animation" id="Animation_jrod3"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -354,13 +376,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1812, 25)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_imrca"]
-_data = {
-"RESET": SubResource("Animation_x35xr"),
-"mov": SubResource("Animation_ppkds")
+"values": [Vector2(2864, -72)]
 }
 
 [sub_resource type="Animation" id="Animation_t0jy8"]
@@ -377,21 +393,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(2864, -72), Vector2(2864, -135)]
-}
-
-[sub_resource type="Animation" id="Animation_jrod3"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(2864, -72)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_eoep7"]
@@ -551,8 +552,9 @@ autoplay = "mov"
 [node name="enemy" parent="." instance=ExtResource("10_pbw58")]
 position = Vector2(519, -138)
 
-[node name="computer_pwd_chk" parent="." instance=ExtResource("12_bhm7a")]
+[node name="computer_strong" parent="." instance=ExtResource("12_bhm7a")]
 position = Vector2(1107, 5)
+script = ExtResource("13_4gkid")
 
 [node name="enemy2" parent="." instance=ExtResource("10_pbw58")]
 position = Vector2(1696, 22)

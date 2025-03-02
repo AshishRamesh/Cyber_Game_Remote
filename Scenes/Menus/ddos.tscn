@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://co0hula8pgqxb"]
+[gd_scene load_steps=11 format=3 uid="uid://b36pc1xufc7uq"]
 
+[ext_resource type="Script" path="res://Scenes/Menus/ddos.gd" id="1_5ofi5"]
 [ext_resource type="Texture2D" uid="uid://cpq3qdfhjjbes" path="res://assets/World Files/Warped City/V1/warped city files/ENVIRONMENT/background/skyline-a.png" id="1_hxx20"]
 [ext_resource type="FontFile" uid="uid://dmujmael4nlo1" path="res://assets/Fonts/Vermin Vibes 1989.ttf" id="2_uvb7n"]
 [ext_resource type="FontFile" uid="uid://db67b11v1r2hx" path="res://assets/Fonts/Minecrafter.Alt.ttf" id="3_wvj1c"]
@@ -34,6 +35,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_5ofi5")
 
 [node name="bg" type="Panel" parent="."]
 layout_mode = 1
@@ -52,9 +54,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -278.0
-offset_top = 557.0
+offset_top = 392.0
 offset_right = 278.0
-offset_bottom = 656.0
+offset_bottom = 491.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_uvb7n")
@@ -63,7 +65,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_a8gbt")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_64tnn")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_fslal")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_1hcs1")
-text = "PRESS ENTER TO CONTINUE"
+text = "PRESS down arrow to continue"
 
 [node name="yellow_boader" type="Panel" parent="bg"]
 layout_mode = 1
@@ -72,14 +74,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -1015.0
-offset_top = -524.5
-offset_right = 1015.0
-offset_bottom = 524.5
+offset_left = -692.0
+offset_top = -346.0
+offset_right = 693.0
+offset_bottom = 382.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_j6ki3")
-metadata/_edit_lock_ = true
 
 [node name="content" type="Label" parent="bg/yellow_boader"]
 layout_mode = 1
@@ -88,14 +89,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -953.0
-offset_top = -420.0
-offset_right = 953.0
-offset_bottom = 322.0
+offset_left = -642.5
+offset_top = -298.0
+offset_right = 998.5
+offset_bottom = 374.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_wvj1c")
-theme_override_font_sizes/font_size = 39
+theme_override_font_sizes/font_size = 27
 text = "The city is under attack! Malicious bots are flooding the system with fake 
 requests. As the cybersecurity expert, your job is to block harmful traffic 
 before it crashes the system!
@@ -117,10 +118,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -229.0
-offset_top = 86.0
-offset_right = 302.0
-offset_bottom = 208.0
+offset_left = -348.5
+offset_top = 44.0
+offset_right = 421.5
+offset_bottom = 166.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("2_uvb7n")
 theme_override_font_sizes/font_size = 110

@@ -14,20 +14,20 @@ func _ready():
 		$TimerLabel.text = "Time: " + str(game_time)
 
 	if has_node("CountdownTimer"):
-		$CountdownTimer.connect("timeout", update_timer)  # ✅ This function is now defined below
+		$CountdownTimer.connect("timeout", update_timer)
 		$CountdownTimer.start()
 
 	if has_node("GameTimer"):
-		$GameTimer.connect("timeout", _on_game_timer_timeout)  # ✅ This function is now defined below
+		$GameTimer.connect("timeout", _on_game_timer_timeout)
 		$GameTimer.start(game_time)
 
 	if has_node("SpawnTimer"):
 		$SpawnTimer.connect("timeout", spawn_websites)
 		$SpawnTimer.start()
 
-	update_cpu_load_display()  # ✅ This function is now defined below
+	update_cpu_load_display()
 
-# ✅ FIXED: Add the missing function "update_timer()"
+# ✅ Fixed update_timer() function
 func update_timer():
 	if game_over_state:
 		return  
@@ -38,11 +38,11 @@ func update_timer():
 	else:
 		game_over("Time's Up!")
 
-# ✅ FIXED: Add the missing function "_on_game_timer_timeout()"
+# ✅ Fixed _on_game_timer_timeout() function
 func _on_game_timer_timeout():
 	game_over("Time's Up!")
 
-# ✅ FIXED: Add the missing function "update_cpu_load_display()"
+# ✅ Fixed update_cpu_load_display() function
 func update_cpu_load_display():
 	if has_node("CPULoadLabel"):
 		$CPULoadLabel.text = "Server Damage: " + str(load_value) + "%"
@@ -50,6 +50,7 @@ func update_cpu_load_display():
 	if has_node("LoadBar"):
 		$LoadBar.value = load_value  
 
+# ✅ Fixed spawn_websites() so packets are fully visible
 func spawn_websites():
 	if game_over_state:
 		return  
@@ -67,10 +68,14 @@ func spawn_websites():
 			website_instance.website_name = website_names[randi() % website_names.size()]  
 			website_instance.is_malicious = website_instance.website_name in malicious_websites  
 
-		website_instance.position = Vector2(randi() % 800, -50)  
+		# ✅ Fix: Ensure packets remain fully visible on the screen
+		var screen_width = get_viewport_rect().size.x
+		var packet_width = 100  # Adjust based on UI
+		website_instance.position = Vector2(float(randi() % int(screen_width - packet_width)), -50)
+ 
 
-		if website_instance.has_signal("pressed"):
-			website_instance.connect("pressed", Callable(self, "_on_website_clicked").bind(website_instance))
+		# ✅ Connect button clicks properly
+		website_instance.connect("pressed", Callable(self, "_on_website_clicked").bind(website_instance))
 
 		add_child(website_instance)  
 
@@ -83,6 +88,40 @@ func spawn_websites():
 				increase_cpu_load()
 			website_instance.queue_free()
 
+# ✅ Fixed _on_website_clicked() so websites disappear on click
+func _on_website_clicked(website_instance):
+	if game_over_state:
+		return  
+
+	if website_instance.is_malicious:
+		update_score(true)  # Correct block
+	else:
+		update_score(false)  # Incorrect block
+
+	website_instance.queue_free()  # Remove the clicked website
+
+# ✅ Fixed update_score() to stop game when CPU load reaches 100%
+func update_score(correct):
+	if correct:
+		score += 10
+	else:
+		load_value += 10  
+	
+	update_cpu_load_display()
+	update_score_display()  # ✅ Added function to update the score label
+
+	# Stop game immediately if CPU Load reaches 100%
+	if load_value >= 100:
+		load_value = 100  
+		game_over("System Overload!")
+
+# ✅ New function to update the score display
+func update_score_display():
+	if has_node("ScoreLabel"):
+		$ScoreLabel.text = "Score: " + str(score)
+
+
+# ✅ Fixed increase_cpu_load() to stop game immediately
 func increase_cpu_load():
 	if game_over_state:
 		return  
@@ -90,15 +129,19 @@ func increase_cpu_load():
 	load_value += 20  
 	update_cpu_load_display()
 
+	# Stop game immediately if CPU Load reaches 100%
 	if load_value >= 100:
+		load_value = 100  
 		game_over("System Overload!")
 
+# ✅ Fixed game_over() to stop the game completely
 func game_over(message):
 	print(message + " Final Score: " + str(score))
 	Global.final_score = score  
 	
 	game_over_state = true  
 
+	# Stop all timers
 	if has_node("GameTimer"):
 		$GameTimer.stop()
 	if has_node("SpawnTimer"):
@@ -106,13 +149,14 @@ func game_over(message):
 	if has_node("CountdownTimer"):
 		$CountdownTimer.stop()
 
+	# Remove all remaining packets from screen
 	for child in get_children():
-		if child.name.begins_with("Website"):  
+		if child is Button:
 			child.queue_free()
 
-	if get_tree():
-		await get_tree().process_frame  
-		if load_value >= 100:  
-			get_tree().change_scene_to_file("res://Scenes/Menus/game_over.tscn")  
-		else:  
-			get_tree().change_scene_to_file("res://Scenes/Menus/you_won.tscn")  
+	# Change scene to Game Over or Victory screen
+	await get_tree().process_frame  
+	if load_value >= 100:  
+		get_tree().change_scene_to_file("res://Scenes/Menus/game_over.tscn")  
+	else:  
+		get_tree().change_scene_to_file("res://Scenes/Menus/you_won.tscn")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dr7ncg4g0ya7o"]
+[gd_scene load_steps=14 format=3 uid="uid://cybqhlxhgfj2b"]
 
 [ext_resource type="Texture2D" uid="uid://cpq3qdfhjjbes" path="res://assets/World Files/Warped City/V1/warped city files/ENVIRONMENT/background/skyline-a.png" id="1_7xid6"]
 [ext_resource type="Script" path="res://Scenes/Menus/credits.gd" id="1_18ax7"]
@@ -9,7 +9,7 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mvwji"]
 texture = ExtResource("1_7xid6")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yxuqf"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t26j0"]
 bg_color = Color(0, 0, 0, 0.298039)
 border_width_left = 5
 border_width_top = 5
@@ -58,37 +58,36 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_mvwji")
 
-[node name="yellow_boader" type="Panel" parent="bg"]
+[node name="yellow_boader2" type="Panel" parent="bg"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -1015.0
-offset_top = -524.5
-offset_right = 1015.0
-offset_bottom = 524.5
+offset_left = -701.0
+offset_top = -324.0
+offset_right = 741.0
+offset_bottom = 362.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_yxuqf")
-metadata/_edit_lock_ = true
+theme_override_styles/panel = SubResource("StyleBoxFlat_t26j0")
 
-[node name="content" type="Label" parent="bg/yellow_boader"]
+[node name="content" type="Label" parent="bg"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -853.0
-offset_top = -259.0
-offset_right = 853.0
-offset_bottom = 259.0
+offset_left = -576.0
+offset_top = -238.0
+offset_right = 291.0
+offset_bottom = 258.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_hkqvq")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 37
 text = "DEVELOPERS
 - ASHISH RAMESH
 - SAHIL DESAI
@@ -112,7 +111,7 @@ offset_bottom = 208.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("2_0ch16")
 theme_override_font_sizes/font_size = 110
-text = "CREADITS"
+text = "CREdits"
 horizontal_alignment = 1
 
 [node name="cross" type="Button" parent="bg"]
@@ -122,10 +121,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 833.0
-offset_top = -449.0
-offset_right = 932.0
-offset_bottom = -371.0
+offset_left = 777.0
+offset_top = -478.0
+offset_right = 876.0
+offset_bottom = -400.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5rvwf")
