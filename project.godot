@@ -18,6 +18,8 @@ run/main_scene="res://Scenes/Menus/game_over.tscn"
 
 [autoload]
 
+Sounds="*res://assets/Sounds/sounds.tscn"
+Global="*res://Scripts/mini_game/ddos/Global.gd"
 Global="*res://Scripts/mini_game/ddos/Global.gd"
 Main="res://main.gd"
 

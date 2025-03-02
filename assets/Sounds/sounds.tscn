@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://bssn50qdld4x8"]
+[gd_scene load_steps=6 format=3 uid="uid://bssn50qdld4x8"]
 
 [ext_resource type="Script" path="res://assets/Sounds/sounds.gd" id="1_g02cq"]
 [ext_resource type="AudioStream" uid="uid://cp1h7i57c61dp" path="res://assets/Sounds/music1.mp3" id="1_pyyw3"]
+[ext_resource type="AudioStream" uid="uid://dl0ptn2f1o6ri" path="res://assets/Sounds/jump_fix_2.mp3" id="3_mbni2"]
+[ext_resource type="AudioStream" uid="uid://dafo2v1lkh331" path="res://assets/Sounds/jsyd_mario_slide-93009.mp3" id="4_qosea"]
+[ext_resource type="AudioStream" uid="uid://5hfehjmn1ny0" path="res://assets/Sounds/Mario Death_fix.mp3" id="5_k74nx"]
 
 [node name="Sounds" type="Node2D"]
 script = ExtResource("1_g02cq")
@@ -10,3 +13,12 @@ script = ExtResource("1_g02cq")
 stream = ExtResource("1_pyyw3")
 
 [node name="jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_mbni2")
+
+[node name="slide" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_qosea")
+pitch_scale = 1.05
+
+[node name="death" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_k74nx")
+pitch_scale = 1.05

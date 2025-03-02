@@ -15,6 +15,14 @@ func play_jump():
 	if not mute:
 		$jump.play() # Replace with function body.
 
+func play_slide():
+	if not mute:
+		$slide.play()
+
+func play_death():
+	if not mute:
+		$death.play()
+
 func play_music_stop():
 	if not mute:
 		$music.stop() # Replace with function body.
