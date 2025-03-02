@@ -4,7 +4,6 @@ extends CharacterBody2D
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -290.0
-@onready var jump_sound: AudioStreamPlayer2D = $"../jump_sound"
 
 var platVel = Vector2(0,0)
 
