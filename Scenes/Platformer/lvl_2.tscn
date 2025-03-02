@@ -10,6 +10,17 @@
 [ext_resource type="PackedScene" uid="uid://bn0gqbgpd1gk5" path="res://Scenes/Platformer/platform_up_down.tscn" id="8_o4qj8"]
 [ext_resource type="Texture2D" uid="uid://cpm8h248t8qpg" path="res://assets/World Files/city_skyline/front.png" id="9_dcbp2"]
 [ext_resource type="PackedScene" uid="uid://0rurickf46sk" path="res://Scenes/Platformer/enemy.tscn" id="10_pbw58"]
+[gd_scene load_steps=19 format=3 uid="uid://sld6yo2bavte"]
+
+[ext_resource type="PackedScene" uid="uid://j65lk7vt3oms" path="res://Scenes/Platformer/Player.tscn" id="1_adqk8"]
+[ext_resource type="Texture2D" uid="uid://dur6idjg3c46" path="res://assets/World Files/Warped City/V1/warped city files/ENVIRONMENT/tileset.png" id="2_hleo2"]
+[ext_resource type="PackedScene" uid="uid://brjxkyjyxhjpd" path="res://Scenes/Platformer/computer.tscn" id="3_c33rd"]
+[ext_resource type="PackedScene" path="res://Scenes/Platformer/killzone.tscn" id="4_i4b0c"]
+[ext_resource type="PackedScene" uid="uid://bivqp7d28cn3c" path="res://Scenes/Platformer/coin.tscn" id="5_vugeq"]
+[ext_resource type="PackedScene" uid="uid://cicqg022ckx8k" path="res://Scenes/Platformer/platform.tscn" id="6_505rf"]
+[ext_resource type="Texture2D" uid="uid://bs7dxo2g10bt2" path="res://assets/World Files/cyberpunk-corridor-files/PNG/back.png" id="7_7rn4n"]
+[ext_resource type="Texture2D" uid="uid://cwjhs08ijkxx1" path="res://assets/World Files/Background/bg-2.png" id="8_d2bpi"]
+[ext_resource type="Texture2D" uid="uid://2yycbbockbfo" path="res://assets/World Files/Background/bg-3.png" id="9_8hw4d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sa44g"]
 texture = ExtResource("2_hleo2")

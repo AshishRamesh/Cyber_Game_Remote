@@ -138,6 +138,7 @@ scale = Vector2(2.7315, 2.28014)
 theme_override_styles/panel = SubResource("StyleBoxTexture_tyirg")
 
 [node name="down" type="Panel" parent="."]
+layout_mode = 0
 offset_left = 1391.0
 offset_top = 877.0
 offset_right = 1502.0

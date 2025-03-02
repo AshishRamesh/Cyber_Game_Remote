@@ -14,12 +14,10 @@ config/name="Cyber_Security_Game"
 run/main_scene="res://Scenes/Menus/ddos.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
-<<<<<<<Updatedupstreamrun/main_scene="res://Scenes/Menus/game_over.tscn"
 
 [autoload]
 
-Global="*res://Scripts/mini_game/ddos/Global.gd"
-Main="*res://main.gd"
+Sounds="*res://assets/Sounds/sounds.tscn"
 
 [display]
 
