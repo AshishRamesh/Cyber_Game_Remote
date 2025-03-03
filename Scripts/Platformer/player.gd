@@ -37,7 +37,7 @@ func _physics_process(delta: float) -> void:
 		else:
 			animated_sprite.play("run")
 	else:
-		Sounds.play_jump()
+		#Sounds.play_jump()
 		animated_sprite.play("jump")
 	
 	if direction:
@@ -45,5 +45,5 @@ func _physics_process(delta: float) -> void:
 	elif is_on_floor():
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	move_and_slide()
-	Sounds.play_slide()
+	#Sounds.play_slide()
 	platVel = get_platform_velocity()

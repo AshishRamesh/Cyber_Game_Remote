@@ -36,7 +36,7 @@ shadow_size = 5
 shadow_offset = Vector2(2, 2)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_smk4a"]
-bg_color = Color(0, 1, 0.966667, 1)
+bg_color = Color(0.694118, 0.0862745, 0.2, 1)
 skew = Vector2(1, 0)
 border_width_left = 7
 border_width_top = 9

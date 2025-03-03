@@ -10,7 +10,6 @@ func play_music():
 	if not mute:
 		$music.play() # Replace with function body.
 
-
 func play_jump():
 	if not mute:
 		$jump.play() # Replace with function body.
